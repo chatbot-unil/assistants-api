@@ -5,6 +5,7 @@ import sys
 
 parser = argparse.ArgumentParser(description='Convert CSV files to JSON.')
 parser.add_argument('--path', default='data/csv', help='Path to the CSV file or directory containing CSV files')
+parser.add_argument('--output_name', default='students_data.json', help='Name of the output JSON file')
 args = parser.parse_args()
 
 def save_to_json(data, filiere):
@@ -38,7 +39,7 @@ def merge_json_data(json_data_list):
             unified_json[year].update(data)
     return unified_json
 
-def save_json(data, path='data/json/unified_statistics.json'):
+def save_json(data, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
@@ -74,4 +75,5 @@ if __name__ == '__main__':
         "contexte": "Ce document retrace les statistiques du nombre d'étudiants (sexe, nationalité) inscrits au semestre d'automne depuis 2011 à l'Université de Lausanne.",
         "data": unified_json
     }
-    save_json(unified_json)
+    output_name = f"data/json/{args.output_name}"
+    save_json(unified_json_with_context, output_name)

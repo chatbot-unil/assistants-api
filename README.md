@@ -235,3 +235,9 @@ Maintenat je lui ai demandé de faire un graphique avec les données de 2011 à 
 L'instruction étais : **en te basant sur les données que tu possèdes peut tu me donner la filière qui a le plus d'étudiant en 2018**
 
 Il a répondu au-dela de mes espérances, il bien compris que je voulais le nom de la filière avec le plus d'étudiant en 2018 et a même reussi a me donner le nom complet alors que il n'est pas dans le fichier json.
+
+## Test depuis l'api
+
+Maintenant que j'ai testé depuis le playground et que j'ai vu qe les résultats sont satisfaisant, je vais tester depuis l'api.
+
+### Code python
