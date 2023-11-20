@@ -133,3 +133,72 @@ Devient :
     }
 }
 ```
+
+## Test depuis le playground
+
+Tout d'abord je vais tester le fonctionnement des assistants api depuis le playground sans y deployer depuis l'api pour voir si les résultats sont autant satisfaisant que depuis data analysis.
+
+![playground](./images/playground.png)
+
+A noté que l'instruction est :
+
+`Tu est un assistant data scientist et tu dois répondre au différentes questions en te basant sur les chiffres contenu dans les json que tu auras à ta disposition, ils sont composée de données concernant les Etudiant·e·s inscrit·e·sa au semestre d’automne par faculté selon le sexe et la nationalité a l'université de lausanne (UNIL)`
+
+### Test 1
+
+![test1](./images/test1.png)
+
+La question étais : **Combien il y a t'il d'étudiant en FTSR en 2020 ?**
+
+Il a bien répondu a la question mais je pense que nous pourrions améliorer la rapidité en formtant mieux les données.
+
+### Test 2
+
+![test2](./images/test2.png)
+
+La question étais : **Combien il y a t'il d'étudiant en HEC en 2020 ?**
+
+De ce que je vois chat-gpt s'attend a un autre type de schéma dans le json mais surtour il ne comprend pas quel fichier correspond a quel faculté. Il faudrait donc lui donner plus d'information sur les données dans le json.
+
+Je vais essayer de reformater les données pour voir si cela change quelque chose. Je vais donc créer un nouveau json avec les données de toutes les facultés, sous la forme :
+
+```json
+{
+	"contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne depuis 2012 a l'université de Lausanne.",
+	"FTSR": {
+		"2011": {
+			"femmes": 1519,
+			"hommes": 1085,
+			"etranger": 556,
+			"CH": 2048,
+			"total": 2604
+		},
+		"2012": {
+			"femmes": 1555,
+			"hommes": 1170,
+			"etranger": 626,
+			"CH": 2099,
+			"total": 2725
+		},
+		...
+	},
+	"HEC": {
+		"2011": {
+			"femmes": 1519,
+			"hommes": 1085,
+			"etranger": 556,
+			"CH": 2048,
+			"total": 2604
+		},
+		"2012": {
+			"femmes": 1555,
+			"hommes": 1170,
+			"etranger": 626,
+			"CH": 2099,
+			"total": 2725
+		},
+		...
+	},
+	...
+}
+```
