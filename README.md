@@ -164,41 +164,60 @@ Je vais essayer de reformater les données pour voir si cela change quelque chos
 
 ```json
 {
-	"contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne depuis 2012 a l'université de Lausanne.",
-	"FTSR": {
-		"2011": {
+	"contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne depuis 2011 à l'université de Lausanne.",
+	"2011":
+	{
+		"FTSR":
+		{
 			"femmes": 1519,
 			"hommes": 1085,
 			"etranger": 556,
 			"CH": 2048,
 			"total": 2604
 		},
-		"2012": {
-			"femmes": 1555,
-			"hommes": 1170,
-			"etranger": 626,
-			"CH": 2099,
-			"total": 2725
+		"HEC":
+		{
+			"femmes": 1519,
+			"hommes": 1085,
+			"etranger": 556,
+			"CH": 2048,
+			"total": 2604
 		},
 		...
 	},
-	"HEC": {
-		"2011": {
+	"2012":{
+		"FTSR":
+		{
 			"femmes": 1519,
 			"hommes": 1085,
 			"etranger": 556,
 			"CH": 2048,
 			"total": 2604
-		},
-		"2012": {
-			"femmes": 1555,
-			"hommes": 1170,
-			"etranger": 626,
-			"CH": 2099,
-			"total": 2725
 		},
 		...
 	},
 	...
 }
 ```
+
+### Test 3
+
+![test3](./images/test3.png)
+
+La question étais : **Combien il y a t'il d'étudiant en lettre en 2015**
+
+Nous pouvons voir que avec le nouveau format de json il comprend mieux les données et répond mieux aux questions.
+
+### Test 4
+
+![test4](./images/test4.png)
+
+La question étais : **Combien il y a t'il d'étudiantes en FTSR en 2020 ?**
+
+Nous pouvons voir que avec le nouveau format de json il comprend mieux les données, mais sur cette question il a répondu faux puisque c'est le nombre d'étudiantes en 2021 et non en 2020. Mais il a compris la nuance entre étudiant et étudiante.
+
+### Test 5
+
+![test5](./images/test5.png)
+
+Ce test est une suite de queston a propos des étudiants Lettres, l'assistant a bien répondu a toutes les questions. Et à même reussi a faire la différence entre le nombre d'étudiants en 2020 et 2021.
