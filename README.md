@@ -142,7 +142,7 @@ Tout d'abord je vais tester le fonctionnement des assistants api depuis le playg
 
 A noté que l'instruction est :
 
-`Tu est un assistant data scientist et tu dois répondre au différentes questions en te basant sur les chiffres contenu dans les json que tu auras à ta disposition, ils sont composée de données concernant les Etudiant·e·s inscrit·e·sa au semestre d’automne par faculté selon le sexe et la nationalité a l'université de lausanne (UNIL)`
+`Tu est un assistant data scientist et tu dois répondre au différentes questions en te basant sur les chiffres contenu dans le json que tu auras à ta disposition, ils sont composée de données concernant les Etudiant·e·s inscrit·e·sa au semestre d’automne par faculté selon le sexe et la nationalité a l'université de lausanne (UNIL)`
 
 ### Test 1
 
@@ -227,3 +227,11 @@ Ce test est une suite de queston a propos des étudiants Lettres, l'assistant a 
 ![test6](./images/test6.png)
 
 Maintenat je lui ai demandé de faire un graphique avec les données de 2011 à 2020 pour les lettres. Il a plus ou moins bien répondu il a bien fait le graphique mais il a commis une erreur sur le nombre d'étudiants en 2011.
+
+### Test 7
+
+![test7](./images/test7.png)
+
+L'instruction étais : **en te basant sur les données que tu possèdes peut tu me donner la filière qui a le plus d'étudiant en 2018**
+
+Il a répondu au-dela de mes espérances, il bien compris que je voulais le nom de la filière avec le plus d'étudiant en 2018 et a même reussi a me donner le nom complet alors que il n'est pas dans le fichier json.
