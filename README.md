@@ -221,3 +221,9 @@ Nous pouvons voir que avec le nouveau format de json il comprend mieux les donn�
 ![test5](./images/test5.png)
 
 Ce test est une suite de queston a propos des étudiants Lettres, l'assistant a bien répondu a toutes les questions. Et à même reussi a faire la différence entre le nombre d'étudiants en 2020 et 2021.
+
+### Test 6
+
+![test6](./images/test6.png)
+
+Maintenat je lui ai demandé de faire un graphique avec les données de 2011 à 2020 pour les lettres. Il a plus ou moins bien répondu il a bien fait le graphique mais il a commis une erreur sur le nombre d'étudiants en 2011.
