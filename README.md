@@ -164,39 +164,39 @@ Je vais essayer de reformater les données pour voir si cela change quelque chos
 
 ```json
 {
-	"contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne depuis 2011 à l'université de Lausanne.",
-	"2011":
-	{
-		"FTSR":
-		{
-			"femmes": 1519,
-			"hommes": 1085,
-			"etranger": 556,
-			"CH": 2048,
-			"total": 2604
-		},
-		"HEC":
-		{
-			"femmes": 1519,
-			"hommes": 1085,
-			"etranger": 556,
-			"CH": 2048,
-			"total": 2604
-		},
-		...
-	},
-	"2012":{
-		"FTSR":
-		{
-			"femmes": 1519,
-			"hommes": 1085,
-			"etranger": 556,
-			"CH": 2048,
-			"total": 2604
-		},
-		...
-	},
-	...
+    "contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne depuis 2011 à l'université de Lausanne.",
+    "2011":
+    {
+        "FTSR":
+        {
+            "femmes": 1519,
+            "hommes": 1085,
+            "etranger": 556,
+            "CH": 2048,
+            "total": 2604
+        },
+        "HEC":
+        {
+            "femmes": 1519,
+            "hommes": 1085,
+            "etranger": 556,
+            "CH": 2048,
+            "total": 2604
+        },
+        ...
+    },
+    "2012":{
+        "FTSR":
+        {
+            "femmes": 1519,
+            "hommes": 1085,
+            "etranger": 556,
+            "CH": 2048,
+            "total": 2604
+        },
+        ...
+    },
+    ...
 }
 ```
 
@@ -240,4 +240,109 @@ Il a répondu au-dela de mes espérances, il bien compris que je voulais le nom 
 
 Maintenant que j'ai testé depuis le playground et que j'ai vu qe les résultats sont satisfaisant, je vais tester depuis l'api.
 
-### Code python
+### Envoi des fichiers json
+
+La première étape pour avoir un assistant qui nous sois utile c'est qu'il puisse avoir accès au données qui nous intéresse. Pour cela je vais devoir lui donner accès au json que j'ai créé. Pour cela je vais utiliser le code python suivant :
+
+```python
+def send_files_to_openAI(data):
+    file = client.files.create(
+        purpose='assistants',
+        file=open(data, 'rb')
+    )
+    return file
+
+def send_all_files(dir):
+    files = []
+    for filename in os.listdir(dir):
+        if filename.endswith(".json"):
+            file = send_files_to_openAI(os.path.join(dir, filename))
+            files.append(file)
+    return files
+```
+
+Ce code va envoyer tous les fichiers json du dossier `data/json` à l'api et va retourner une liste de tous les fichiers.
+
+### Création de l'assistant
+
+Maintenant que j'ai envoyé les fichiers json à l'api je vais pouvoir créer l'assistant. Pour cela je vais utiliser le code python suivant :
+
+```python
+def create_assistants_with_code_interpreter_and_retrieval(name, files, instructions):
+    files_ids = [file.id for file in files]
+    assistant = client.beta.assistants.create(
+        name=name,
+        instructions=instructions,
+        model=args.model,
+        tools=[{"type": "code_interpreter"}, {"type": "retrieval"}],
+        file_ids=files_ids,
+    )
+    return assistant
+```
+
+A noté que j'ai utilisé le code_interpreter et le retrieval pour que l'assistant puisse faire des graphiques, ainsi que des calculs et des recherches dans les données que je lui ai envoyé.
+
+### Test de l'assistant
+
+Avant de pouvoir crée un chat avec l'assistant il faut initialiser un système de thread(voir [ici](https://platform.openai.com/docs/assistants/how-it-works/managing-threads-and-messages)).
+
+Un thread est un ensemble de messages qui sont liés entre eux. Ce qui forme une conversation. Pour créer un thread il faut utiliser le code python suivant :
+
+```python
+def chat_create_thread(content):
+    thread = client.beta.threads.create(
+        messages=[
+            {
+                "role": "user",
+                "content": content,
+            }
+        ],
+    )
+    return thread
+```
+
+Ensuite comme dis ci-dessus chaque thread est composé de messages. Pour envoyer un message il faut utiliser le code python suivant :
+
+```python
+def chat_send_message(thread_id, content):
+    message = client.beta.threads.messages.create(
+        thread_id=thread_id,
+        role="user",
+        content=content,
+    )
+    return message
+```
+
+Maintenant que j'ai créé un thread et que j'ai ajouté un message je vais pouvoir demander à l'assistant de répondre à mon message. Pour cela je vais utiliser le code python suivant :
+
+```python
+def run_assistant(assistant_id, thread_id):
+    run = client.beta.threads.runs.create(
+        thread_id=thread_id,
+        assistant_id=assistant_id,
+    )
+    return run
+```
+
+Et surtout pour récupérer la réponse de l'assistant, mais avant il faut attendre que l'assistant est fini de répondre. Pour cela je vais utiliser le code python suivant :
+
+```python
+def get_run_status(run_id, thread_id):
+    run = client.beta.threads.runs.retrieve(
+        run_id=run_id,
+        thread_id=thread_id,
+    )
+    return run # status peut être "queued", "in_progress", "completed", "requires_action", "expired", "cancelling", "cancelled", "failed"
+```
+
+Et pour récupérer la réponse de l'assistant il faut utiliser le code python suivant :
+
+```python
+def get_last_assistant_message(thread_id):
+    messages = client.beta.threads.messages.list(
+        thread_id=thread_id,
+    )
+    for message in messages:
+        if message.role == "assistant":
+            return message.content[0].text.value
+```

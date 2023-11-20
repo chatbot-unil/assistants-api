@@ -84,7 +84,10 @@ def get_messages(thread_id):
 	)
 	return messages
 
-def get_last_assistant_message(messages):
+def get_last_assistant_message(thread_id):
+	messages = client.beta.threads.messages.list(
+		thread_id=thread_id,
+	)
 	for message in messages:
 		if message.role == "assistant":
 			return message.content[0].text.value
@@ -113,5 +116,4 @@ if __name__ == '__main__':
 		run_status = get_run_status(run.id, thread.id)
 		while run_status.status != "completed":
 			run_status = get_run_status(run.id, thread.id)
-		messages = get_messages(thread.id)
-		print("Assistant: " + get_last_assistant_message(messages))
+		print("Assistant: " + get_last_assistant_message(thread.id))
