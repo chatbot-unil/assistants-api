@@ -102,6 +102,7 @@ if __name__ == '__main__':
 
 	print("Assistant created with ID: " + assistant.id)
 	print("Thread created with ID: " + thread.id)
+	print("Files sent to OpenAI: " + str([file.id for file in files]))
 
 	while True:
 		message = input("You: ")
