@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser(description='Create assistants on OpenAI.')
 parser.add_argument('--data_path', default='data/json', help='Path to the JSON file or directory containing JSON files')
 parser.add_argument('--model', default='gpt-4-1106-preview', help='Name of the model to use')
 parser.add_argument('--init_message', default='Bonjour', help='Initial message to send to the assistant')
+parser.add_argument('--output', default='output_images', help='Output directory')
 
 args = parser.parse_args()
 
@@ -84,13 +85,41 @@ def get_messages(thread_id):
 	)
 	return messages
 
-def get_last_assistant_message(thread_id):
-	messages = client.beta.threads.messages.list(
-		thread_id=thread_id,
-	)
+def get_last_assistant_message_id(thread_id):
+	messages = get_messages(thread_id)
 	for message in messages:
 		if message.role == "assistant":
-			return message.content[0].text.value
+			return message.id
+
+def retrive_message(message_id, thread_id):
+	message = client.beta.threads.messages.retrieve(
+		message_id=message_id,
+		thread_id=thread_id,
+	)
+	return message
+
+def print_all_contents(message):
+	for content in message.content:
+		type = test_type_content(content)
+		if type == "text":
+			print(content)
+			print(type)
+		elif type == "image_file":
+			print(content.image_file)
+			get_image(content.image_file.file_id)
+
+def get_image(image_file_id):
+	image_file = client.files.content(image_file_id)
+	file_path = os.path.join(args.output, image_file_id + ".png")
+	with open(file_path, "wb") as f:
+		f.write(image_file.content)
+
+def test_type_content(content):
+	return content.type
+
+def get_image_url_from_file_id(file_id):
+	file = client.files.retrieve(file_id)
+	return file.url
 
 if __name__ == '__main__':
 	data_path = args.data_path
@@ -111,9 +140,13 @@ if __name__ == '__main__':
 		message = input("You: ")
 		if message == "exit":
 			break
-		chat_send_message(thread.id, message)
+		message = chat_send_message(thread.id, message)
+		print("Message sent with ID: " + message.id)
 		run = run_assistant(assistant.id, thread.id)
 		run_status = get_run_status(run.id, thread.id)
 		while run_status.status != "completed":
 			run_status = get_run_status(run.id, thread.id)
-		print("Assistant: " + get_last_assistant_message(thread.id))
+		messages = get_messages(thread.id)
+		message_id = get_last_assistant_message_id(thread.id)
+		assistant_response = retrive_message(message_id, thread.id)
+		print_all_contents(assistant_response)
