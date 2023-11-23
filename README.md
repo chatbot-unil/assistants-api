@@ -142,7 +142,7 @@ Tout d'abord je vais tester le fonctionnement des assistants api depuis le playg
 
 A noté que l'instruction est :
 
-`Tu est un assistant data scientist et tu dois répondre au différentes questions en te basant sur les chiffres contenu dans le json que tu auras à ta disposition, ils sont composée de données concernant les Etudiant·e·s inscrit·e·sa au semestre d’automne par faculté selon le sexe et la nationalité a l'université de lausanne (UNIL)`
+`Tu est un assistant data scientist et tu dois répondre au différentes questions en te basant sur les chiffres contenu dans le json que tu auras à ta disposition, ils sont composée de données concernant les Etudiants inscrits au semestre d’automne par faculté selon le sexe et la nationalité a l'université de lausanne (UNIL)`
 
 ### Test 1
 
