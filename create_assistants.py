@@ -8,7 +8,6 @@ parser.add_argument('--data_path', default='data/json', help='Path to the JSON f
 parser.add_argument('--model', default='gpt-4-1106-preview', help='Name of the model to use')
 parser.add_argument('--init_message', default='Bonjour', help='Initial message to send to the assistant')
 parser.add_argument('--output', default='output_images', help='Output directory')
-
 args = parser.parse_args()
 
 load_dotenv()
