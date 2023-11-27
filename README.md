@@ -236,6 +236,10 @@ L'instruction étais : **en te basant sur les données que tu possèdes peut tu 
 
 Il a répondu au-dela de mes espérances, il bien compris que je voulais le nom de la filière avec le plus d'étudiant en 2018 et a même reussi a me donner le nom complet alors que il n'est pas dans le fichier json.
 
+## Conclusion des tests depuis le playground
+
+Malgré quelques erreurs sur les données, l'assistant a bien compris les questions et a bien répondu pour la plupart des questions. Les résultats sont donc encourageant pour l'idée de créer un assistant qui répondrais à des questions sur les statistiques de l'unil depuis l'api.
+
 ## Test depuis l'api
 
 Maintenant que j'ai testé depuis le playground et que j'ai vu qe les résultats sont satisfaisant, je vais tester depuis l'api.
@@ -282,7 +286,7 @@ def create_assistants_with_code_interpreter_and_retrieval(name, files, instructi
 
 A noté que j'ai utilisé le code_interpreter et le retrieval pour que l'assistant puisse faire des graphiques, ainsi que des calculs et des recherches dans les données que je lui ai envoyé.
 
-### Test de l'assistant
+### Conversation avec l'assistant
 
 Avant de pouvoir crée un chat avec l'assistant il faut initialiser un système de thread(voir [ici](https://platform.openai.com/docs/assistants/how-it-works/managing-threads-and-messages)).
 
@@ -338,11 +342,135 @@ def get_run_status(run_id, thread_id):
 Et pour récupérer la réponse de l'assistant il faut utiliser le code python suivant :
 
 ```python
-def get_last_assistant_message(thread_id):
+def get_messages(thread_id):
     messages = client.beta.threads.messages.list(
         thread_id=thread_id,
     )
+    return messages
+
+def get_last_assistant_message_id(thread_id):
+    messages = get_messages(thread_id)
     for message in messages:
         if message.role == "assistant":
-            return message.content[0].text.value
+            return message.id
+```
+
+Maintenant que j'ai récupéré l'id du dernier message de l'assistant je vais pouvoir récupérer le contenu de ce message. Pour cela je vais utiliser le code python suivant :
+
+```python
+def retrive_message(message_id, thread_id):
+    message = client.beta.threads.messages.retrieve(
+        message_id=message_id,
+        thread_id=thread_id,
+    )
+    return message
+```
+
+La dernière étape est de tester le type de message que l'assistant a envoyé. Pour cela je vais utiliser le code python suivant :
+
+```python
+def print_all_contents(message):
+    for content in message.content:
+        type = test_type_content(content)
+        if type == "text":
+            print(content)
+            print(type)
+        elif type == "image_file":
+            print(content.image_file)
+            get_image(content.image_file.file_id)
+
+def get_image(image_file_id):
+    image_file = client.files.content(image_file_id)
+    file_path = os.path.join(args.output, image_file_id + ".png")
+    with open(file_path, "wb") as f:
+        f.write(image_file.content)
+
+def test_type_content(content):
+    return content.type
+
+def get_image_url_from_file_id(file_id):
+    file = client.files.retrieve(file_id)
+    return file.url
+```
+
+Nous pouvons voir que j'ai créé une fonction `print_all_contents` qui va tester le type de contenu et qui va afficher le contenu si c'est du texte ou qui va télécharger l'image si c'est une image.
+
+Maintant que nous avons toutes les fonctions pour tester l'assistant je vais pouvoir créer un chat avec l'assistant. Pour cela je vais utiliser le code python suivant :
+
+```python
+def chat_with_assistant(assistant_id, thread_id, content):
+    chat_send_message(thread_id, content)
+    run = run_assistant(assistant_id, thread_id)
+    while get_run_status(run.id, thread_id).status == "in_progress":
+        time.sleep(1)
+    message_id = get_last_assistant_message_id(thread_id)
+    message = retrive_message(message_id, thread_id)
+    print_all_contents(message)
+```
+
+### Test 1 avec l'api
+
+Nous alors tester l'assistant avec l'api voici le résultat :
+
+![test1](./images/test1-assistant.png)
+
+Nous pouvons voir que l'assistant a bien répondu à la question.
+
+### Test 2 avec l'api (image)
+
+Nous allons maintenant tester l'assistant avec une question qui demande un graphique. Voici le résultat :
+
+![test2](./images/test2-assistant.png)
+
+Malgré le message joint à l'image qui dit que l'assistant n'as pas pu utiliser les vraies données, nous pouvons voir que les données semblent correctes.
+
+![test2](./output_images/file-km5Gr8WChxODV6sdifK3qGhk.png)
+
+### Test 3 avec l'api (image)
+
+Je vais maintenant retenter un test avec un graphique. Mais juste pour le total de la filière HEC et avec plus de précision. Voici le résultat :
+
+![test3](./images/test3-assistant.png)
+
+![test3](./output_images/file-xW4c9DuBYYj1b3s9MlwaCXgU.png)
+
+Nous pouvons voir que l'assistant à fais des erreurs sur les données, mais il a bien compris que je voulais un graphique avec le nombre d'étudiant en HEC.
+
+### Test 4 avec l'api (image)
+
+Je lui ai demandé si il était sûr des données qu'il m'a donné. Voici le résultat :
+
+![test4](./images/test4-assistant.png)
+
+![test4](./output_images/file-jaM2lMgGrzNGLOTQ1dH0ZMGj.png)
+
+Nous pouvons voir que l'assistant a bien compris que je voulais un graphique avec le nombre d'étudiant en HEC. Mais il a encore fait des erreurs sur les données.
+
+## Conclusion des tests avec les premiers tests avec l'api
+
+Nous pouvons voir que l'assistant a bien compris les questions et a bien répondu. Mais il a fait des erreurs sur les données. Il faudrait donc lui donner plus d'information sur les données pour qu'il puisse mieux les comprendre. Ou ressayer avec des données partagées par filière mais avec un format différent.
+
+## Test avec des données partagées par filière 2
+
+Maintenant que j'ai tester avec les données qui regroupe toutes les filières, je vais tester avec des données qui sont partagées par filière. Dans 1 seul fichier mais avec un format différent. Voici le format :
+
+```json
+{
+    "contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FTSR depuis 2012 a l'université de Lausanne.",
+    "2011": {
+        "femmes": 1519,
+        "hommes": 1085,
+        "etranger": 556,
+        "CH": 2048,
+        "total": 2604
+    },
+    "2012": {
+        "femmes": 1519,
+        "hommes": 1085,
+        "etranger": 556,
+        "CH": 2048,
+        "total": 2604
+    },
+    ...
+}
 ```

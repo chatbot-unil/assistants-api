@@ -2,6 +2,7 @@ import os
 import argparse
 from dotenv import load_dotenv
 from openai import OpenAI
+import time
 
 parser = argparse.ArgumentParser(description='Create assistants on OpenAI.')
 parser.add_argument('--data_path', default='data/json', help='Path to the JSON file or directory containing JSON files')
@@ -120,6 +121,15 @@ def get_image_url_from_file_id(file_id):
 	file = client.files.retrieve(file_id)
 	return file.url
 
+def chat_with_assistant(assistant_id, thread_id, content):
+    chat_send_message(thread_id, content)
+    run = run_assistant(assistant_id, thread_id)
+    while get_run_status(run.id, thread_id).status == "in_progress":
+        time.sleep(1)
+    message_id = get_last_assistant_message_id(thread_id)
+    message = retrive_message(message_id, thread_id)
+    print_all_contents(message)
+
 if __name__ == '__main__':
 	data_path = args.data_path
 	if os.path.isfile(data_path) and data_path.endswith(".json"):
@@ -139,13 +149,4 @@ if __name__ == '__main__':
 		message = input("You: ")
 		if message == "exit":
 			break
-		message = chat_send_message(thread.id, message)
-		print("Message sent with ID: " + message.id)
-		run = run_assistant(assistant.id, thread.id)
-		run_status = get_run_status(run.id, thread.id)
-		while run_status.status != "completed":
-			run_status = get_run_status(run.id, thread.id)
-		messages = get_messages(thread.id)
-		message_id = get_last_assistant_message_id(thread.id)
-		assistant_response = retrive_message(message_id, thread.id)
-		print_all_contents(assistant_response)
+		chat_with_assistant(assistant.id, thread.id, message)
