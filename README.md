@@ -456,21 +456,70 @@ Maintenant que j'ai tester avec les données qui regroupe toutes les filières, 
 
 ```json
 {
-    "contexte": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FTSR depuis 2012 a l'université de Lausanne.",
-    "2011": {
-        "femmes": 1519,
-        "hommes": 1085,
-        "etranger": 556,
-        "CH": 2048,
-        "total": 2604
-    },
-    "2012": {
-        "femmes": 1519,
-        "hommes": 1085,
-        "etranger": 556,
-        "CH": 2048,
-        "total": 2604
-    },
-    ...
+    "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FBM depuis 2012 a l'université de Lausanne.",
+    "data": {
+        "2011": {
+            "FBM": {
+                "femmes": 1519,
+                "hommes": 1085,
+                "etranger": 556,
+                "CH": 2048,
+                "total": 2604
+            }
+        },
+        "2012": {
+            "FBM": {
+                "femmes": 1555,
+                "hommes": 1170,
+                "etranger": 626,
+                "CH": 2099,
+                "total": 2725
+            }
+        }...
+    }
 }
 ```
+
+Cepandant pour ce test il ne suffira pas simplement de charger les fichier mais le but sera de faire en sorte que l'assistant identifie le/les fichier(s) qui correspond(ent) à la question, et les charges pour pouvoir répondre à la question. Pour que ça fonctionne il faudra que au démarrage de l'assistant il charge un fichier qui lui permettra de trouver tous les fichiers qu'il a besoins pour rpéondre a la question et qu'il les charges.
+
+### Création du fichier de recherche
+
+Ce fichier est un JSON qui contient les informations sur les fichiers charger sur OpenAi.
+
+``` json
+[
+    {
+        "name": "FTSR.json",
+        "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FTSR depuis 2012 a l'université de Lausanne.",
+        "tag": "#students #FTSR",
+        "id": "file-kAcdOomBxgHetFv6wsM6Itwc"
+    },
+    {
+        "name": "FGSE.json",
+        "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FGSE depuis 2012 a l'université de Lausanne.",
+        "tag": "#students #FGSE",
+        "id": "file-Dg7RSVC4852fgRGraAoRqIGT"
+    },
+    {
+        "name": "FDCA.json",
+        "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FDCA depuis 2012 a l'université de Lausanne.",
+        "tag": "#students #FDCA",
+        "id": "file-kbuzfU1yVWahEoDLND8NDScB"
+    },
+    {
+        "name": "SSP.json",
+        "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en SSP depuis 2012 a l'université de Lausanne.",
+        "tag": "#students #SSP",
+        "id": "file-E8px4tRB6tzfZHV1uxxL7Iyf"
+    }
+    ...
+]
+```
+
+C'est grace à ce fichier que l'assistant va pouvoir trouver les fichiers qui correspondent à la question.
+
+### Chainage des requêtes
+
+Maintenant que j'ai créé le fichier de recherche, je vais pouvoir créer un assistant qui va pouvoir trouver les fichiers qui correspondent à la question. Le plus important pour cette partie c'est l'instruction qui va permettre à l'assistant de trouver les fichiers qui correspondent à la question. Voici l'instruction :
+
+`Étant donné la liste JSON suivante, qui contient des informations sur différents fichiers de statistiques étudiantes, votre tâche est de simplement identifier les fichiers pertinents et d'extraire leurs IDs. Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique. Veuillez simplement fournir les IDs des fichiers pertinents au format JSON.`
