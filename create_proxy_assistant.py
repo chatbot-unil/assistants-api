@@ -244,3 +244,16 @@ if __name__ == '__main__':
 		if message == "exit":
 			break
 		chat_with_assistant(assistant.id, thread.id, message)
+	
+	# Supprimer l'assistant
+	client.beta.assistants.delete(assistant_id=assistant_id)
+	print("Assistant deleted with ID: " + assistant_id)
+
+	# Supprimer les fichiers
+	for file in files:
+		client.files.delete(file_id=file.id)
+		print("File deleted with ID: " + file.id)
+
+	# Supprimer le fichier proxy
+	client.files.delete(file_id=proxy_file.id)
+
