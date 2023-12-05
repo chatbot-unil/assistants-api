@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(description='Create assistants on OpenAI.')
 parser.add_argument('--data_path', default='data/', help='Path to the JSON file or directory containing JSON files')
 parser.add_argument('--model', default='gpt-4-1106-preview', help='Name of the model to use')
 parser.add_argument('--instructions', default="Étant donné la liste JSON suivante, qui contient des informations sur différents fichiers de statistiques étudiantes, votre tâche est de simplement identifier les fichiers pertinents et d'extraire leurs IDs. Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique. Veuillez simplement fournir les IDs des fichiers pertinents au format JSON.", help='Instructions to send to the assistant')
-parser.add_argument('--name', default='proxy_assistant', help='Name of the assistant')
+parser.add_argument('--name', default='unil_assistant', help='Name of the assistant')
 parser.add_argument('--init_message', default='Bonjour', help='Initial message to send to the assistant')
 parser.add_argument('--output', default='output_images', help='Output directory')
 args = parser.parse_args()
@@ -35,7 +35,7 @@ def send_all_files(dir):
 	# Send CSV files in the directory, excluding the proxy file
 	files = []
 	for file in os.listdir(dir):
-		if file.endswith(".csv") and "proxy" not in file:
+		if file.endswith(".json") and "proxy" not in file:
 			file_path = os.path.join(dir, file)
 			files.append(send_files_to_openAI(file_path))
 	return files
@@ -173,7 +173,7 @@ def chat_with_assistant(assistant_id, thread_id, question):
 	chat_send_message(thread_id, question)
 	run = run_assistant(assistant_id, thread_id)
 	while get_run_status(run.id, thread_id).status == "in_progress":
-		time.sleep(1)
+		time.sleep(10)
 	message_id = get_last_assistant_message_id(thread_id)
 	message = retrive_message(message_id, thread_id)
 	print_all_contents(message)
@@ -193,7 +193,7 @@ def procces_second_question(assistant_id, thread_id, file_ids):
 		assistant_id = update_assistant(assistant_id, instructions, file_ids)
 		run = run_assistant(assistant_id, thread_id)
 		while get_run_status(run.id, thread_id).status == "in_progress":
-			time.sleep(1)
+			time.sleep(10)
 		message_id = get_last_assistant_message_id(thread_id)
 		message = retrive_message(message_id, thread_id)
 		print_all_contents(message)
@@ -213,11 +213,11 @@ def extract_file_ids_from_text(message):
 # Utiliser cette fonction dans votre programme principal
 if __name__ == '__main__':
 	data_path = args.data_path
+	data_path = os.path.join(data_path, 'json')
 	proxy_file_path = os.path.join(data_path, 'proxy.json') # Assurez-vous que ce chemin est correct
-	data_path = os.path.join(data_path, 'csv')
 	files = []
 
-	if os.path.isfile(data_path) and data_path.endswith(".csv"):
+	if os.path.isfile(data_path) and data_path.endswith(".json"):
 		file = send_files_to_openAI(data_path)
 		files.append(file)
 	elif os.path.isdir(data_path):
