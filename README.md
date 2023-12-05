@@ -518,8 +518,113 @@ Ce fichier est un JSON qui contient les informations sur les fichiers charger su
 
 C'est grace à ce fichier que l'assistant va pouvoir trouver les fichiers qui correspondent à la question.
 
+Cepandant pour que l'assistant puisse trouver les fichiers qui correspondent à la question il faut que le fichier possèdes les id's des fichiers qui correspondent à la question. Pour cela je vais utiliser le code python suivant :
+
+```python
+def add_ids_to_proxy_file(proxy_file, files):
+    # Lire le fichier proxy
+    with open(proxy_file, 'r', encoding='utf-8') as file:
+        proxy_data = json.load(file)
+
+    # Associer les IDs aux objets JSON
+    for item in proxy_data:
+        # Utiliser le nom du fichier pour trouver l'ID correspondant
+        file_name = item['name']
+        for file in files:
+            if file.filename == file_name:
+                item['id'] = file.id
+                break
+
+    # Écrire les modifications dans le fichier proxy
+    with open(proxy_file, 'w', encoding='utf-8') as file:
+        json.dump(proxy_data, file, indent=4, ensure_ascii=False)
+```
+
 ### Chainage des requêtes
 
 Maintenant que j'ai créé le fichier de recherche, je vais pouvoir créer un assistant qui va pouvoir trouver les fichiers qui correspondent à la question. Le plus important pour cette partie c'est l'instruction qui va permettre à l'assistant de trouver les fichiers qui correspondent à la question. Voici l'instruction :
 
 `Étant donné la liste JSON suivante, qui contient des informations sur différents fichiers de statistiques étudiantes, votre tâche est de simplement identifier les fichiers pertinents et d'extraire leurs IDs. Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique. Veuillez simplement fournir les IDs des fichiers pertinents au format JSON.`
+
+Maintenant que j'ai l'instruction j'ai utiliser le même code que avant pour créer l'assistant. Cependant j'ai ajouter quelques fonctions pour pouvoir récupérer les fichiers qui correspondent à la question. Voici le code python :
+
+```python
+# fonction pour ajouter des nouveaux fichiers a l'assistant
+def get_assistant_files(assistant_id):
+    assistant = client.beta.assistants.retrieve(
+        assistant_id=assistant_id,
+    )
+    return assistant.file_ids
+
+def update_assistant(assistant_id, instructions, file_ids):
+    assistant_files = get_assistant_files(assistant_id)
+    assistant_files = assistant_files + file_ids
+    print(assistant_files)
+    assistant = client.beta.assistants.update(
+        assistant_id=assistant_id,
+        instructions=instructions,
+        file_ids=assistant_files,
+    )
+    return assistant.id
+```
+
+J'ai modifié la fonction `chat_with_assistant` pour qu'elle puisse récupérer les fichiers qui correspondent à la question. Voici le code python :
+
+```python
+def chat_with_assistant(assistant_id, thread_id, question):
+    # Send the question and receive the response
+    chat_send_message(thread_id, question)
+    run = run_assistant(assistant_id, thread_id)
+    while get_run_status(run.id, thread_id).status == "in_progress":
+        time.sleep(10)
+    message_id = get_last_assistant_message_id(thread_id)
+    message = retrive_message(message_id, thread_id)
+    print_all_contents(message)
+
+    # Extract file IDs from plain text
+    file_ids = extract_file_ids_from_text(message)
+
+    print("File IDs found: ", file_ids)
+    
+    procces_second_question(assistant_id, thread_id, file_ids)
+```
+
+J'ai créé une fonction `extract_file_ids_from_text` qui va extraire les ids des nom de fichiers qui sont dans le message de l'assistant. Voici le code python :
+
+```python
+def extract_file_ids_from_text(message):
+    file_ids = []
+    for content in message.content:
+        if content.type == 'text':
+            text_content = content.text.value
+            extracted_ids = re.findall(r'file-\w+', text_content)
+            file_ids.extend([str(file_id) for file_id in extracted_ids if isinstance(file_id, str)])
+    return file_ids
+```
+
+J'ai créé une fonction `procces_second_question` qui va permettre de répondre à la question avec les fichiers qui correspondent à la question. Voici le code python :
+
+```python
+def procces_second_question(assistant_id, thread_id, file_ids):
+    instructions = "Maintenant que vous avez identifié les fichiers pertinents, veuillez les ajouter à l'assistant en utilisant leur ID. Vous pouvez ajouter plusieurs IDs en les séparant par des virgules."
+    # If file IDs are found, load and query a sub-assistant
+    if file_ids:
+        # Update the assistant with the new instructions
+        assistant_id = update_assistant(assistant_id, instructions, file_ids)
+        run = run_assistant(assistant_id, thread_id)
+        while get_run_status(run.id, thread_id).status == "in_progress":
+            time.sleep(10)
+        message_id = get_last_assistant_message_id(thread_id)
+        message = retrive_message(message_id, thread_id)
+        print_all_contents(message)
+    else:
+        print("No relevant files found for the asked question.")
+```
+
+### Test 1 avec les données partagées par filière 2
+
+Nous allons alors tester l'assistant avec les données partagées par filière 2. Voici le résultat :
+
+![test1](./images/test1-assistant2.png)
+
+Nous pouvons voir que l'assistant a bien compris quels fichiers il devait charger pour répondre à la question. Et il a bien répondu que ça sois au niveau des données et à bien pu comparer les données entre elles.
