@@ -628,3 +628,9 @@ Nous allons alors tester l'assistant avec les données partagées par filière 2
 ![test1](./images/test1-assistant2.png)
 
 Nous pouvons voir que l'assistant a bien compris quels fichiers il devait charger pour répondre à la question. Et il a bien répondu que ça sois au niveau des données et à bien pu comparer les données entre elles.
+
+## Fichier RDS pour l'assistant
+
+Maintenant L'université de Lausanne m'a donnée accès a un fichier RDS qui contient des données sur la filière SSP. Je vais donc utiliser ce fichier pour créer un assistant qui répondra à des questions sur les données de la filière SSP.
+
+### Format des données
