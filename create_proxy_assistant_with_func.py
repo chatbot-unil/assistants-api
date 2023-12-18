@@ -26,10 +26,28 @@ client = OpenAI()
 
 INSTRUCTIONS = """
 Étant donné la liste JSON suivante, qui contient des informations sur différents fichiers de statistiques étudiantes, votre tâche est de simplement identifier les fichiers pertinents et d'extraire leurs IDs. 
-Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique. 
-Veuillez simplement fournir les IDs des fichiers pertinents sous la forme d'une liste.
+Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique dans un premier temps.
+
 Utilisez la fonction suivante pour ajouter un fichier à l'assistant:
+
 add_file_to_the_assistant(file_ids=["file_id_1", "file_id_2", "file_id_3"])
+
+Dans un second temps, vous pourrez répondre à la question quand vous aurez identifié les fichiers pertinents.
+
+La réponse doit être structurée comme suit:
+{
+	'answer': 'Votre réponse ici',
+	'valeurs': ['valeur1', 'valeur2', 'valeur3']
+}
+
+Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
+
+{
+	'answer': 'None',
+	'valeurs': []
+}
+
+Merci pour votre assistance !
 """
 
 def send_files_to_openAI(data):
@@ -68,12 +86,8 @@ def add_ids_to_proxy_file(proxy_file, files):
 
 def add_file_to_the_assistant(file_ids, assistant_id):
     print("Adding file to the assistant...")
-    INSTRUCTIONS = """
-    Maintenant que vous avez identifié les fichiers pertinents, et que vous les avez ajoutés vous pouvez répondre à la question.
-    """
     _ = client.beta.assistants.update(
 		assistant_id=assistant_id,
-		instructions=INSTRUCTIONS,
 		file_ids=file_ids,
 	)
     for file_id in file_ids:
@@ -102,6 +116,7 @@ def setup_assistant(client, answer, files_ids=[]):
                                 "items": {
                                     "type": "string",
                                 },
+                                "description": "List of file IDs to add to the assistant",
                             },
                         },
                         "required": ["file_ids"],
@@ -182,7 +197,9 @@ if __name__ == "__main__":
 
     # uploader le fichier proxy
     proxy_file = send_files_to_openAI(proxy_file_path)
-
+    
+	# calcul time execution
+    start_time = time.time()
     assistant_id, thread_id = setup_assistant(client, "combien il y a d'étudiants en SSP en 2018 ?", [proxy_file.id])
     print("Files sent to OpenAI: " + str([f"ID: {file.id}, Name: {file.filename}" for file in files]))
     print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
@@ -192,3 +209,4 @@ if __name__ == "__main__":
 
     message_dict = json.loads(messages.model_dump_json())
     print(message_dict['data'][0]['content'][0]["text"]["value"])
+    print("--- %s seconds ---" % (time.time() - start_time))

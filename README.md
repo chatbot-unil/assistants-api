@@ -798,3 +798,93 @@ Sachant que ce fichier provient directement de R et qu'il n'as pas été modifie
 Maintenant que j'ai testé le fichier RDS dans un assistant sur le playground, je vais tester les fonctions call de openai pour mieux comprendre leur fonctionnement. Pour y utiliser par la suite pour filtrer les données.
 
 #### Qu'est-ce que les fonctions call ?
+
+Les "Function Calls" d'OpenAI désignent une fonctionnalité de l'API d'OpenAI qui permet aux développeurs de demander à des modèles comme GPT-4 d'utiliser des fonctions qui sont crée par les développeurs. Cela permet aux développeurs de créer des assistants qui peuvent faire des choses plus complexes que simplement répondre à des questions. Et surtout de chainé des requêtes.
+
+#### Dans notre cas
+
+Dans un premier temps nous allons utiliser les fonctions call pour charger le bon fichier json en fonction de la question. Pour cela nous allons utiliser la fonction `add_file_to_the_assistant` qui va permettre d'ajouter un fichier à l'assistant. Voici le code python :
+
+```python
+def add_file_to_the_assistant(file_ids, assistant_id):
+    print("Adding file to the assistant...")
+    _ = client.beta.assistants.update(
+        assistant_id=assistant_id,
+        file_ids=file_ids,
+    )
+    for file_id in file_ids:
+        print(f"File ID: {file_id}")
+    print("File added to the assistant.")
+    return json.dumps({"file_ids": file_ids})
+```
+
+Maintenant que j'ai la fonction pour ajouter un fichier à l'assistant, je vais pouvoir l'ajouter à l'assistant a la création. Voici le code python :
+
+```python
+assistant = client.beta.assistants.create(
+        name=args.name,
+        instructions=INSTRUCTIONS,
+        tools=[
+            {"type": "code_interpreter"}, 
+            {"type": "retrieval"},
+            {
+                "type": "function",
+                "function": {
+                    "name": "add_file_to_the_assistant",
+                    "description": "Use this function to add a file to the assistant",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "file_ids": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                },
+                                "description": "List of file IDs to add to the assistant",
+                            },
+                        },
+                        "required": ["file_ids"],
+                    },
+                },
+            }
+        ],
+        file_ids=files_ids,
+        model=args.model,
+    )
+```
+
+Cette fonction va permettre d'ajouter l'id du fichier json qui correspond à la question. Comme nous pouvons le voir dans le test ci-dessous.
+
+#### Test 1 avec les fonctions call
+
+Nous allons alors tester les fonctions call directement depuis l'api. Voici le résultat :
+
+![test1](./images/test1-assistant3.png)
+
+A noté que j'ai demandé à l'assistant que la réponse à la question soit un json grace à l'instruction :
+
+```text
+Étant donné la liste JSON suivante, qui contient des informations sur différents fichiers de statistiques étudiantes, votre tâche est de simplement identifier les fichiers pertinents et d'extraire leurs IDs. 
+Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique dans un premier temps.
+
+Utilisez la fonction suivante pour ajouter un fichier à l'assistant:
+
+add_file_to_the_assistant(file_ids=["file_id_1", "file_id_2", "file_id_3"])
+
+Dans un second temps, vous pourrez répondre à la question quand vous aurez identifié les fichiers pertinents.
+
+La réponse doit être structurée comme suit:
+{
+    'answer': 'Votre réponse ici',
+    'valeurs': ['valeur1', 'valeur2', 'valeur3']
+}
+
+Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
+
+{
+    'answer': 'None',
+    'valeurs': []
+}
+
+Merci pour votre assistance !
+```
