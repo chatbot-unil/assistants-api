@@ -68,18 +68,18 @@ def add_ids_to_proxy_file(proxy_file, files):
 
 def add_file_to_the_assistant(file_ids, assistant_id):
     print("Adding file to the assistant...")
+    INSTRUCTIONS = """
+    Maintenant que vous avez identifié les fichiers pertinents, et que vous les avez ajoutés vous pouvez répondre à la question.
+    """
     _ = client.beta.assistants.update(
 		assistant_id=assistant_id,
+		instructions=INSTRUCTIONS,
 		file_ids=file_ids,
 	)
     for file_id in file_ids:
         print(f"File ID: {file_id}")
     print("File added to the assistant.")
     return json.dumps({"file_ids": file_ids})
-
-available_functions = {
-    "add_file_to_the_assistant": add_file_to_the_assistant,
-}
 
 def setup_assistant(client, answer, files_ids=[]):
     # create a new agent
@@ -148,26 +148,22 @@ def run_assistant(client, assistant_id, thread_id):
                 thread_id=thread_id
             )
         if run.status == "requires_action":
-            tool_calls = run.required_action.submit_tool_outputs.tool_calls
-            if tool_calls:
-                for tool_call in tool_calls:
-                    function = tool_call.function
-                    print(f"function to call: {function.name}")
-                    if function.name in available_functions:
-                        result = available_functions[function.name](
-                            file_ids = json.loads(function.arguments)['file_ids'],
-                            assistant_id=assistant_id
-                        )
-                        run = client.beta.threads.runs.submit_tool_outputs(
-                            thread_id=thread_id,
-                            run_id=run.id,
-                            tool_outputs=[
-                                {
-                                    "tool_call_id": tool_call.id,
-                                    "output": result,
-                                },
-                            ]
-                        )
+            file_ids = json.loads(run.required_action.submit_tool_outputs.tool_calls[0].function.arguments)['file_ids']
+            print(file_ids)
+            result = add_file_to_the_assistant(
+                file_ids=file_ids,
+                assistant_id=assistant_id
+            )
+            run = client.beta.threads.runs.submit_tool_outputs(
+                thread_id=thread_id,
+                run_id=run.id,
+                tool_outputs=[
+                    {
+                        "tool_call_id": run.required_action.submit_tool_outputs.tool_calls[0].id,
+                        "output": result,
+                    },
+                ]
+            )
 
 if __name__ == "__main__":
     data_path = args.data_path
