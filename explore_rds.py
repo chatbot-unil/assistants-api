@@ -22,7 +22,9 @@ def convert_listvector(lv):
 
 class CustomEncoder(json.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj, (ListVector, ListSexpVector)):
+        if isinstance(obj, robjects.vectors.DataFrame):
+            return pandas2ri.rpy2py(obj).to_dict(orient='records')
+        elif isinstance(obj, (ListVector, ListSexpVector)):
             return {str(key): self.default(value) for key, value in obj.items()}
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
@@ -30,8 +32,6 @@ class CustomEncoder(json.JSONEncoder):
             return list(obj)
         elif hasattr(obj, 'rclass'):
             return str(obj)
-        elif isinstance(obj, robjects.vectors.DataFrame):
-            return pandas2ri.ri2py(obj).to_dict(orient='records')
         return super().default(obj)
 
 def read_and_convert_rds_to_json(rds_path, json_path):
