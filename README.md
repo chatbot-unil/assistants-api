@@ -634,3 +634,167 @@ Nous pouvons voir que l'assistant a bien compris quels fichiers il devait charge
 Maintenant L'université de Lausanne m'a donnée accès a un fichier RDS qui contient des données sur la filière SSP. Je vais donc utiliser ce fichier pour créer un assistant qui répondra à des questions sur les données de la filière SSP.
 
 ### Format des données
+
+Les données sont sous la forme d'un fichier RDS qui contient un dataframe. Voici le format final en JSON :
+
+```json
+{
+"etu": {
+        "headcount_hist": {
+            "ref": {
+                "desc": [
+                    "Nombre d'étudiant·e·s, historique"
+                ],
+                "aliases": {
+                    "time": [
+                        "Semestre académique"
+                    ],
+                    "value": [
+                        "Effectifs"
+                    ]
+                },
+                "margins": {
+                    "": [
+                        {
+                            "value": 5691
+                        }
+                    ],
+                    "time": [
+                        {
+                            "order": -20,
+                            "time": "2013P",
+                            "value": 1004
+                        },
+                        {
+                            "order": -19,
+                            "time": "2013A",
+                            "value": 1098
+                        },
+                        {
+                            "order": -18,
+                            "time": "2014P",
+                            "value": 1025
+                        },
+                        {
+                            "order": -17,
+                            "time": "2014A",
+                            "value": 1163
+                        },
+                        {
+                            "order": -16,
+                            "time": "2015P",
+                            "value": 1056
+                        },
+                        {
+                            "order": -15,
+                            "time": "2015A",
+                            "value": 1199
+                        },
+                        {
+                            "order": -14,
+                            "time": "2016P",
+                            "value": 1098
+                        },
+                        {
+                            "order": -13,
+                            "time": "2016A",
+                            "value": 1235
+                        },
+                        {
+                            "order": -12,
+                            "time": "2017P",
+                            "value": 1144
+                        },
+                        {
+                            "order": -11,
+                            "time": "2017A",
+                            "value": 1369
+                        },
+                        {
+                            "order": -10,
+                            "time": "2018P",
+                            "value": 1246
+                        },
+                        {
+                            "order": -9,
+                            "time": "2018A",
+                            "value": 1479
+                        },
+                        {
+                            "order": -8,
+                            "time": "2019P",
+                            "value": 1357
+                        },
+                        {
+                            "order": -7,
+                            "time": "2019A",
+                            "value": 1588
+                        },
+                        {
+                            "order": -6,
+                            "time": "2020P",
+                            "value": 1464
+                        },
+                        {
+                            "order": -5,
+                            "time": "2020A",
+                            "value": 1812
+                        },
+                        {
+                            "order": -4,
+                            "time": "2021P",
+                            "value": 1712
+                        },
+                        {
+                            "order": -3,
+                            "time": "2021A",
+                            "value": 1871
+                        },
+                        {
+                            "order": -2,
+                            "time": "2022P",
+                            "value": 1714
+                        },
+                        {
+                            "order": -1,
+                            "time": "2022A",
+                            "value": 1889
+                        },
+                        {
+                            "order": 0,
+                            "time": "2023P",
+                            "value": 1699
+                        }
+                    ]
+                }
+            },
+        }
+    }
+}
+```
+
+### Test 1 avec le nouveau format de données (fichier RDS-> JSON)
+
+Nous allons alors tester le fichier RDS dans un assistant sur le playground. Je veux voir si l'assistant comprend les données que je lui ai envoyé. Voici le résultat :
+
+![question-1-assistant-lol](./images/question-1-assistant-lol.png)
+
+![question-1-assistant-lol](./images/question-1-assistant-lol2.png)
+
+![question-1-assistant-lol](./images/question-1-assistant-lol3.png)
+
+Nous pouvons voir que l'assistant a bien compris les données et m'as bien expliqué les données et il a su m'expliquer les ballises que j'ai mis dans les données. Cependant il à pas su me présenter les données correctement. Donc je lui ai redemandé de me présenter les données. Voici le résultat :
+
+![question-1-assistant-lol](./images/question-1-assistant-lol4.png)
+
+Tous les chiffres sont corrects.
+
+#### Conclusion
+
+Sachant que ce fichier provient directement de R et qu'il n'as pas été modifier pour l'assistant, je trouve que les résultats sont satisfaisant. Cependant nous prevoyons d'ajouter des informations sur les données pour que l'assistant puisse mieux les comprendre. Et nous pancher sur les fonctions call de openai pour pouvoir filtrer les données de façon plus précise.
+
+### Fonctions call
+
+Maintenant que j'ai testé le fichier RDS dans un assistant sur le playground, je vais tester les fonctions call de openai pour mieux comprendre leur fonctionnement. Pour y utiliser par la suite pour filtrer les données.
+
+#### Qu'est-ce que les fonctions call ?
