@@ -94,6 +94,7 @@ Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour ind
 Merci pour votre assistance !
 """
 
+# Fonctions associées aux outils
 FUNCTIONS_TO_HANLDE = {
     "add_file_to_the_assistant": add_file_to_the_assistant,
 }
@@ -106,7 +107,7 @@ def send_files_to_openAI(data):
     return file
 
 def send_all_files(dir):
-    # Send CSV files in the directory, excluding the proxy file
+    # Envoyer tous les fichiers JSON dans le dossier spécifié à OpenAI
     files = []
     for file in os.listdir(dir):
         if file.endswith(".json") and "proxy" not in file:
@@ -133,7 +134,7 @@ def add_ids_to_proxy_file(proxy_file, files):
         json.dump(proxy_data, file, indent=4, ensure_ascii=False)
 
 def setup_assistant(client, answer, files_ids=[]):
-    # create a new agent
+    # Création de l'assistant avec les outils et les instructions
     assistant = client.beta.assistants.create(
         name=args.name,
         instructions=INSTRUCTIONS,
@@ -142,28 +143,27 @@ def setup_assistant(client, answer, files_ids=[]):
         model=args.model,
     )
 
-    # Create a new thread
+    # Création d'un nouveau thread
     thread = client.beta.threads.create()
 
-    # Create a new thread message with the provided task
+    # Création d'un message dans le thread
     _ = client.beta.threads.messages.create(
         thread.id,
         role="user",
         content=answer,
     )
 
-    # Return the assistant ID and thread ID
     return assistant.id, thread.id
 
 
 def run_assistant(client, assistant_id, thread_id):
-    # Create a new run for the given thread and assistant
+    # Création d'un nouveau appel d'un thread avec l'assistant spécifié
     run = client.beta.threads.runs.create(
         thread_id=thread_id,
         assistant_id=assistant_id
     )
 
-    # Loop until the run status is either "completed" or "requires_action"
+    # Attendre que le run soit terminé ou qu'il nécessite une action
     while run.status == "in_progress" or run.status == "queued":
         time.sleep(1)
         run = client.beta.threads.runs.retrieve(
@@ -171,11 +171,12 @@ def run_assistant(client, assistant_id, thread_id):
             run_id=run.id
         )
 
-        # At this point, the status is either "completed" or "requires_action"
+        # Si le run est terminé, récupérer les messages
         if run.status == "completed":
             return client.beta.threads.messages.list(
                 thread_id=thread_id
             )
+        # Si le run nécessite une action, exécuter la fonction associée
         if run.status == "requires_action":
             function_name = run.required_action.submit_tool_outputs.tool_calls[0].function.name
             function_to_handle = FUNCTIONS_TO_HANLDE[function_name]
