@@ -23,6 +23,17 @@ thread_id = None
 
 client = OpenAI()
 
+def add_file_to_the_assistant(file_ids, assistant_id):
+    print("Adding file to the assistant {}".format(assistant_id))
+    _ = client.beta.assistants.update(
+        assistant_id=assistant_id,
+        file_ids=file_ids,
+    )
+    for file_id in file_ids:
+        print(f"File ID: {file_id}")
+    print("File added to the assistant {}".format(assistant_id))
+    return json.dumps({"file_ids": file_ids})
+
 FUNCTIONS_TOOLS = [
     {
         "type": "function",
@@ -83,6 +94,10 @@ Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour ind
 Merci pour votre assistance !
 """
 
+FUNCTIONS_TO_HANLDE = {
+    "add_file_to_the_assistant": add_file_to_the_assistant,
+}
+
 def send_files_to_openAI(data):
     file = client.files.create(
         purpose='assistants',
@@ -116,17 +131,6 @@ def add_ids_to_proxy_file(proxy_file, files):
     # Écrire les modifications dans le fichier proxy
     with open(proxy_file, 'w', encoding='utf-8') as file:
         json.dump(proxy_data, file, indent=4, ensure_ascii=False)
-
-def add_file_to_the_assistant(file_ids, assistant_id):
-    print("Adding file to the assistant {}".format(assistant_id))
-    _ = client.beta.assistants.update(
-        assistant_id=assistant_id,
-        file_ids=file_ids,
-    )
-    for file_id in file_ids:
-        print(f"File ID: {file_id}")
-    print("File added to the assistant {}".format(assistant_id))
-    return json.dumps({"file_ids": file_ids})
 
 def setup_assistant(client, answer, files_ids=[]):
     # create a new agent
@@ -173,22 +177,26 @@ def run_assistant(client, assistant_id, thread_id):
                 thread_id=thread_id
             )
         if run.status == "requires_action":
-            file_ids = json.loads(run.required_action.submit_tool_outputs.tool_calls[0].function.arguments)['file_ids']
-            print(file_ids)
-            result = add_file_to_the_assistant(
-                file_ids=file_ids,
-                assistant_id=assistant_id
-            )
-            run = client.beta.threads.runs.submit_tool_outputs(
-                thread_id=thread_id,
-                run_id=run.id,
-                tool_outputs=[
-                    {
-                        "tool_call_id": run.required_action.submit_tool_outputs.tool_calls[0].id,
-                        "output": result,
-                    },
-                ]
-            )
+            function_name = run.required_action.submit_tool_outputs.tool_calls[0].function.name
+            function_to_handle = FUNCTIONS_TO_HANLDE[function_name]
+            if function_to_handle is None:
+                print(f"Function {function_name} not found")
+                return
+            elif function_to_handle == add_file_to_the_assistant:
+                result = add_file_to_the_assistant(
+                    file_ids=json.loads(run.required_action.submit_tool_outputs.tool_calls[0].function.arguments)['file_ids'],
+                    assistant_id=run.assistant_id,
+                )
+                run = client.beta.threads.runs.submit_tool_outputs(
+                    thread_id=thread_id,
+                    run_id=run.id,
+                    tool_outputs=[
+                        {
+                            "tool_call_id": run.required_action.submit_tool_outputs.tool_calls[0].id,
+                            "output": result,
+                        },
+                    ]
+                )
 
 if __name__ == "__main__":
     data_path = args.data_path
