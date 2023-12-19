@@ -34,17 +34,18 @@ add_file_to_the_assistant(file_ids=["file_id_1", "file_id_2", "file_id_3"])
 
 Dans un second temps, vous pourrez répondre à la question quand vous aurez identifié les fichiers pertinents.
 
-La réponse doit être structurée comme suit:
+La réponse doit être structurée comme suit uniquement :
+
 {
-	'answer': 'Votre réponse ici',
-	'valeurs': ['valeur1', 'valeur2', 'valeur3']
+    'answer': 'la phrase de la réponse'
+    'valeurs': ['valeur1', 'valeur2', 'valeur3']
 }
 
 Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
 
 {
-	'answer': 'None',
-	'valeurs': []
+    'answer': 'None',
+    'valeurs': []
 }
 
 Merci pour votre assistance !
@@ -87,9 +88,9 @@ def add_ids_to_proxy_file(proxy_file, files):
 def add_file_to_the_assistant(file_ids, assistant_id):
     print("Adding file to the assistant {}".format(assistant_id))
     _ = client.beta.assistants.update(
-		assistant_id=assistant_id,
-		file_ids=file_ids,
-	)
+        assistant_id=assistant_id,
+        file_ids=file_ids,
+    )
     for file_id in file_ids:
         print(f"File ID: {file_id}")
     print("File added to the assistant {}".format(assistant_id))
@@ -198,15 +199,29 @@ if __name__ == "__main__":
     # uploader le fichier proxy
     proxy_file = send_files_to_openAI(proxy_file_path)
     
-	# calcul time execution
-    start_time = time.time()
-    assistant_id, thread_id = setup_assistant(client, "combien il y a d'étudiants en SSP en 2018 ?", [proxy_file.id])
-    print("Files sent to OpenAI: " + str([f"ID: {file.id}, Name: {file.filename}" for file in files]))
-    print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
-    print(f"Debugging: Useful for checking logs. https://platform.openai.com/playground?thread={thread_id}")
+    # calcul time execution
+    messages = input("Type your message: ")
+    if messages != "":
+        start_time = time.time()
+        assistant_id, thread_id = setup_assistant(client, messages, [proxy_file.id])
+        print("Files sent to OpenAI: " + str([f"ID: {file.id}, Name: {file.filename}" for file in files]))
+        print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
+        print(f"Debugging: Useful for checking logs. https://platform.openai.com/playground?thread={thread_id}")
 
-    messages = run_assistant(client, assistant_id, thread_id)
+        messages = run_assistant(client, assistant_id, thread_id)
 
-    message_dict = json.loads(messages.model_dump_json())
-    print(message_dict['data'][0]['content'][0]["text"]["value"])
-    print("--- %s seconds ---" % (time.time() - start_time))
+        message_dict = json.loads(messages.model_dump_json())
+        print(message_dict['data'][0]['content'][0]["text"]["value"])
+        print("--- %s seconds ---" % (time.time() - start_time))
+        # Supprimer l'assistant
+        client.beta.assistants.delete(assistant_id=assistant_id)
+        print("Assistant deleted with ID: " + assistant_id)
+
+    # Supprimer les fichiers
+    for file in files:
+        client.files.delete(file_id=file.id)
+    print("Files deleted with ID: " + str([file.id for file in files]))
+
+    # Supprimer le fichier proxy
+    client.files.delete(file_id=proxy_file.id)
+    print("Proxy file deleted with ID: " + proxy_file.id)
