@@ -70,7 +70,7 @@ FUNCTIONS_TOOLS = [
         "type": "function",
         "function": {
             "name": "reload_assistant_with_only_proxy_file",
-            "description": "Use this function to reload the assistant with only the proxy file for a new run",
+            "description": "Use this function to reload the assistant with only the proxy file any time if the current assistant has too many files (20) or if the files are not relevant to the question",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -105,11 +105,11 @@ add_file_to_the_assistant(file_ids=["file_id_1", "file_id_2", "file_id_3"])
 
 Dans un second temps, vous pourrez répondre à la question quand vous aurez identifié les fichiers pertinents.
 
-La réponse doit être structurée comme suit uniquement :
+La réponse doit être structurée comme suit uniquement  aucune autre réponse ne sera acceptée:
 
 {
-    'answer': 'la réponse complète à la question',
-    'valeurs': ['valeur1', 'valeur2', 'valeur3'] # Liste des valeurs numériques à extraire
+    'answer': 'la réponse complète à la question en string',
+    'valeurs': ['valeur1', 'valeur2', 'valeur3']
 }
 
 Dans le cas où vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
@@ -119,9 +119,11 @@ Dans le cas où vous ne trouvez pas de réponse, veuillez utiliser le format sui
     'valeurs': []
 }
 
-A tout moment, si la question n'as pas besoins des fichiers courants, vous pouvez utiliser la fonction suivante pour recharger l'assistant avec seulement le fichier proxy:
+A tout moment, Si le sujet de la question change, et que les fichiers pertinents sont différents, vous pouvez utiliser la fonction suivante pour recharger l'assistant avec uniquement le fichier proxy:
 
 reload_assistant_with_only_proxy_file(proxy_file_id="file_id")
+
+A noté que passé un certain nombre de fichiers (20) l'assistant ne pourra plus être rechargé avec de nouveaux fichiers. Dans ce cas, il faudra impérativement recharger l'assistant avec uniquement le fichier proxy.
 
 Merci d'avance pour votre aide !
 """
