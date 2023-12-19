@@ -23,7 +23,39 @@ thread_id = None
 
 client = OpenAI()
 
+FUNCTIONS_TOOLS = [
+    {
+        "type": "function",
+        "function": {
+            "name": "add_file_to_the_assistant",
+            "description": "Use this function to add a file to the assistant",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "file_ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                        },
+                        "description": "List of file IDs to add to the assistant",
+                    },
+                },
+                "required": ["file_ids"],
+            },
+        },
+    }
+]
 
+TOOLS = [
+    {"type": "code_interpreter"},
+    {"type": "retrieval"},
+] 
+
+# Inclure les fonctions dans les outils
+
+TOOLS.extend(FUNCTIONS_TOOLS)
+
+# Instructions pour l'assistant
 INSTRUCTIONS = """
 Étant donné la liste JSON suivante, qui contient des informations sur différents fichiers de statistiques étudiantes, votre tâche est de simplement identifier les fichiers pertinents et d'extraire leurs IDs. 
 Il n'est pas nécessaire de chercher ou de fournir une réponse à une question spécifique dans un premier temps.
@@ -101,30 +133,7 @@ def setup_assistant(client, answer, files_ids=[]):
     assistant = client.beta.assistants.create(
         name=args.name,
         instructions=INSTRUCTIONS,
-        tools=[
-            {"type": "code_interpreter"}, 
-            {"type": "retrieval"},
-            {
-                "type": "function",
-                "function": {
-                    "name": "add_file_to_the_assistant",
-                    "description": "Use this function to add a file to the assistant",
-                    "parameters": {
-                        "type": "object",
-                        "properties": {
-                            "file_ids": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string",
-                                },
-                                "description": "List of file IDs to add to the assistant",
-                            },
-                        },
-                        "required": ["file_ids"],
-                    },
-                },
-            }
-        ],
+        tools=TOOLS,
         file_ids=files_ids,
         model=args.model,
     )
