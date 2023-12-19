@@ -80,8 +80,8 @@ Dans un second temps, vous pourrez répondre à la question quand vous aurez ide
 La réponse doit être structurée comme suit uniquement :
 
 {
-    'answer': 'la phrase de la réponse'
-    'valeurs': ['valeur1', 'valeur2', 'valeur3']
+    'answer': 'la réponse complète à la question',
+    'valeurs': ['valeur1', 'valeur2', 'valeur3'] # Liste des valeurs numériques à extraire
 }
 
 Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
@@ -180,24 +180,24 @@ def run_assistant(client, assistant_id, thread_id):
         if run.status == "requires_action":
             function_name = run.required_action.submit_tool_outputs.tool_calls[0].function.name
             function_to_handle = FUNCTIONS_TO_HANLDE[function_name]
-            if function_to_handle is None:
-                print(f"Function {function_name} not found")
-                return
-            elif function_to_handle == add_file_to_the_assistant:
-                result = add_file_to_the_assistant(
+            if function_to_handle == add_file_to_the_assistant:
+                result = function_to_handle(
                     file_ids=json.loads(run.required_action.submit_tool_outputs.tool_calls[0].function.arguments)['file_ids'],
                     assistant_id=run.assistant_id,
                 )
-                run = client.beta.threads.runs.submit_tool_outputs(
-                    thread_id=thread_id,
-                    run_id=run.id,
-                    tool_outputs=[
-                        {
-                            "tool_call_id": run.required_action.submit_tool_outputs.tool_calls[0].id,
-                            "output": result,
-                        },
-                    ]
-                )
+            else:
+                print(f"Function {function_name} not found")
+                result = json.dumps({"file_ids": []})
+            run = client.beta.threads.runs.submit_tool_outputs(
+                thread_id=thread_id,
+                run_id=run.id,
+                tool_outputs=[
+                    {
+                        "tool_call_id": run.required_action.submit_tool_outputs.tool_calls[0].id,
+                        "output": result,
+                    },
+                ]
+            )
 
 if __name__ == "__main__":
     data_path = args.data_path
@@ -214,6 +214,8 @@ if __name__ == "__main__":
     # Ajouter les IDs au fichier proxy
     add_ids_to_proxy_file(proxy_file_path, files)
 
+    print("Files sent to OpenAI: " + str([f"ID: {file.id}, Name: {file.filename}" for file in files]))
+
     # uploader le fichier proxy
     proxy_file = send_files_to_openAI(proxy_file_path)
     
@@ -222,7 +224,6 @@ if __name__ == "__main__":
     if messages != "":
         start_time = time.time()
         assistant_id, thread_id = setup_assistant(client, messages, [proxy_file.id])
-        print("Files sent to OpenAI: " + str([f"ID: {file.id}, Name: {file.filename}" for file in files]))
         print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
         print(f"Debugging: Useful for checking logs. https://platform.openai.com/playground?thread={thread_id}")
 
