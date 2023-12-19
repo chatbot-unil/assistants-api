@@ -24,6 +24,8 @@ thread_id = None
 client = OpenAI()
 
 def add_file_to_the_assistant(file_ids, assistant_id):
+    old_file_ids = get_file_from_assistant_api(assistant_id)
+    file_ids.extend(old_file_ids)
     print("Adding file to the assistant {}".format(assistant_id))
     _ = client.beta.assistants.update(
         assistant_id=assistant_id,
@@ -54,7 +56,7 @@ FUNCTIONS_TOOLS = [
                 "required": ["file_ids"],
             },
         },
-    }
+    },
 ]
 
 TOOLS = [
@@ -84,7 +86,7 @@ La réponse doit être structurée comme suit uniquement :
     'valeurs': ['valeur1', 'valeur2', 'valeur3'] # Liste des valeurs numériques à extraire
 }
 
-Si vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
+Dans le cas où vous ne trouvez pas de réponse, veuillez utiliser le format suivant pour indiquer qu'aucune réponse n'a été trouvée :
 
 {
     'answer': 'None',
@@ -132,6 +134,11 @@ def add_ids_to_proxy_file(proxy_file, files):
     # Écrire les modifications dans le fichier proxy
     with open(proxy_file, 'w', encoding='utf-8') as file:
         json.dump(proxy_data, file, indent=4, ensure_ascii=False)
+
+def get_file_from_assistant_api(assistant_id):
+    # Récupérer les fichiers de l'assistant
+    assistant = client.beta.assistants.retrieve(assistant_id=assistant_id)
+    return assistant.file_ids
 
 def setup_assistant(client, answer, files_ids=[]):
     # Création de l'assistant avec les outils et les instructions
