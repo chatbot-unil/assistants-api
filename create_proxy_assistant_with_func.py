@@ -85,14 +85,14 @@ def add_ids_to_proxy_file(proxy_file, files):
         json.dump(proxy_data, file, indent=4, ensure_ascii=False)
 
 def add_file_to_the_assistant(file_ids, assistant_id):
-    print("Adding file to the assistant...")
+    print("Adding file to the assistant {}".format(assistant_id))
     _ = client.beta.assistants.update(
 		assistant_id=assistant_id,
 		file_ids=file_ids,
 	)
     for file_id in file_ids:
         print(f"File ID: {file_id}")
-    print("File added to the assistant.")
+    print("File added to the assistant {}".format(assistant_id))
     return json.dumps({"file_ids": file_ids})
 
 def setup_assistant(client, answer, files_ids=[]):
