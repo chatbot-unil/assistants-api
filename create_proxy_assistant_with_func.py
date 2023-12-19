@@ -36,6 +36,15 @@ def add_file_to_the_assistant(file_ids, assistant_id):
     print("File added to the assistant {}".format(assistant_id))
     return json.dumps({"file_ids": file_ids})
 
+def reload_assistant_with_only_proxy_file(assistant_id, proxy_file_id):
+    print("Reloading assistant with only proxy file {}".format(assistant_id))
+    _ = client.beta.assistants.update(
+        assistant_id=assistant_id,
+        file_ids=[proxy_file_id],
+    )
+    print("Assistant reloaded with only proxy file {}".format(assistant_id))
+    return json.dumps({"file_ids": [proxy_file_id]})
+
 FUNCTIONS_TOOLS = [
     {
         "type": "function",
@@ -57,6 +66,23 @@ FUNCTIONS_TOOLS = [
             },
         },
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "reload_assistant_with_only_proxy_file",
+            "description": "Use this function to reload the assistant with only the proxy file for a new run",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "proxy_file_id": {
+                        "type": "string",
+                        "description": "ID of the proxy file",
+                    },
+                },
+                "required": ["proxy_file_id"],
+            },
+        },
+    }
 ]
 
 TOOLS = [
@@ -93,12 +119,17 @@ Dans le cas où vous ne trouvez pas de réponse, veuillez utiliser le format sui
     'valeurs': []
 }
 
-Merci pour votre assistance !
+A tout moment, si la question n'as pas besoins des fichiers courants, vous pouvez utiliser la fonction suivante pour recharger l'assistant avec seulement le fichier proxy:
+
+reload_assistant_with_only_proxy_file(proxy_file_id="file_id")
+
+Merci d'avance pour votre aide !
 """
 
 # Fonctions associées aux outils
 FUNCTIONS_TO_HANLDE = {
     "add_file_to_the_assistant": add_file_to_the_assistant,
+    "reload_assistant_with_only_proxy_file": reload_assistant_with_only_proxy_file,
 }
 
 def send_files_to_openAI(data):
@@ -140,7 +171,7 @@ def get_file_from_assistant_api(assistant_id):
     assistant = client.beta.assistants.retrieve(assistant_id=assistant_id)
     return assistant.file_ids
 
-def setup_assistant(client, answer, files_ids=[]):
+def create_assistant(client, files_ids=[]):
     # Création de l'assistant avec les outils et les instructions
     assistant = client.beta.assistants.create(
         name=args.name,
@@ -150,18 +181,29 @@ def setup_assistant(client, answer, files_ids=[]):
         model=args.model,
     )
 
+    return assistant
+
+def create_empty_thread(client):
     # Création d'un nouveau thread
     thread = client.beta.threads.create()
+    return thread
 
+def send_message_to_thread(client, thread_id, message):
     # Création d'un message dans le thread
     _ = client.beta.threads.messages.create(
-        thread.id,
+        thread_id,
         role="user",
-        content=answer,
+        content=message,
     )
 
-    return assistant.id, thread.id
+def setup_assistant(client, files_ids=[]):
+    # Création de l'assistant avec les outils et les instructions
+    assistant = create_assistant(client, files_ids)
 
+    # Création d'un nouveau thread
+    thread = create_empty_thread(client)
+
+    return assistant.id, thread.id
 
 def run_assistant(client, assistant_id, thread_id):
     # Création d'un nouveau appel d'un thread avec l'assistant spécifié
@@ -185,26 +227,37 @@ def run_assistant(client, assistant_id, thread_id):
             )
         # Si le run nécessite une action, exécuter la fonction associée
         if run.status == "requires_action":
-            function_name = run.required_action.submit_tool_outputs.tool_calls[0].function.name
-            function_to_handle = FUNCTIONS_TO_HANLDE[function_name]
-            if function_to_handle == add_file_to_the_assistant:
-                result = function_to_handle(
-                    file_ids=json.loads(run.required_action.submit_tool_outputs.tool_calls[0].function.arguments)['file_ids'],
-                    assistant_id=run.assistant_id,
+            tools_call = run.required_action.submit_tool_outputs.tool_calls
+            assistant_id = run.assistant_id
+            run_id = run.id
+            for tool_call in tools_call:
+                function_name = tool_call.function.name
+                function_to_handle = FUNCTIONS_TO_HANLDE[function_name]
+                if function_to_handle == add_file_to_the_assistant:
+                    files_ids = json.loads(tool_call.function.arguments)['file_ids']
+                    result = function_to_handle(
+                        file_ids=files_ids,
+                        assistant_id=assistant_id,
+                    )
+                elif function_to_handle == reload_assistant_with_only_proxy_file:
+                    proxy_file_id = json.loads(tool_call.function.arguments)['proxy_file_id']
+                    result = function_to_handle(
+                        proxy_file_id=proxy_file_id,
+                        assistant_id=assistant_id,
+                    )
+                else:
+                    print(f"Function {function_name} not found")
+                    result = json.dumps({"file_ids": []})
+                run = client.beta.threads.runs.submit_tool_outputs(
+                    thread_id=thread_id,
+                    run_id=run_id,
+                    tool_outputs=[
+                        {
+                            "tool_call_id": tool_call.id,
+                            "output": result,
+                        },
+                    ]
                 )
-            else:
-                print(f"Function {function_name} not found")
-                result = json.dumps({"file_ids": []})
-            run = client.beta.threads.runs.submit_tool_outputs(
-                thread_id=thread_id,
-                run_id=run.id,
-                tool_outputs=[
-                    {
-                        "tool_call_id": run.required_action.submit_tool_outputs.tool_calls[0].id,
-                        "output": result,
-                    },
-                ]
-            )
 
 if __name__ == "__main__":
     data_path = args.data_path
@@ -225,23 +278,27 @@ if __name__ == "__main__":
 
     # uploader le fichier proxy
     proxy_file = send_files_to_openAI(proxy_file_path)
+
+    # Création de l'assistant avec les outils et les instructions
+    assistant_id, thread_id = setup_assistant(client, [proxy_file.id])
+    # Debugging
+    print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
+    print(f"Debugging: Useful for checking logs. https://platform.openai.com/playground?thread={thread_id}")
     
-    # calcul time execution
     messages = input("Type your message: ")
-    if messages != "":
-        start_time = time.time()
-        assistant_id, thread_id = setup_assistant(client, messages, [proxy_file.id])
-        print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
-        print(f"Debugging: Useful for checking logs. https://platform.openai.com/playground?thread={thread_id}")
+    while messages != "exit" and messages != "":
+        # Envoyer un message au thread
+        send_message_to_thread(client, thread_id, messages)
 
         messages = run_assistant(client, assistant_id, thread_id)
 
         message_dict = json.loads(messages.model_dump_json())
         print(message_dict['data'][0]['content'][0]["text"]["value"])
-        print("--- %s seconds ---" % (time.time() - start_time))
-        # Supprimer l'assistant
-        client.beta.assistants.delete(assistant_id=assistant_id)
-        print("Assistant deleted with ID: " + assistant_id)
+
+        messages = input("Type your message: ")
+
+    client.beta.assistants.delete(assistant_id=assistant_id)
+    print("Assistant deleted with ID: " + assistant_id)
 
     # Supprimer les fichiers
     for file in files:
