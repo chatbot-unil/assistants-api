@@ -271,12 +271,14 @@ if __name__ == "__main__":
     messages = input("Quel est votre question ? ")
     while messages != "exit" and messages != "":
         # Envoyer un message au thread
+        time_start = time.time()
         send_message_to_thread(client, thread_id, messages)
 
         messages = run_assistant(client, assistant_id, thread_id)
 
         message_dict = json.loads(messages.model_dump_json())
         print(message_dict['data'][0]['content'][0]["text"]["value"])
+        print(f"Temps de réponse: {time.time() - time_start} secondes")
 
         messages = input("Quel est votre question ? ")
 
