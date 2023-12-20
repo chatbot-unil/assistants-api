@@ -19,34 +19,30 @@ args = parser.parse_args()
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-thread_id = None
 
 client = OpenAI()
 
 def add_file_to_the_assistant(file_ids, assistant_id):
     old_file_ids = get_file_from_assistant_api(assistant_id)
     file_ids.extend(old_file_ids)
-    print("Adding file to the assistant {}".format(assistant_id))
     _ = client.beta.assistants.update(
         assistant_id=assistant_id,
         file_ids=file_ids,
     )
-    for file_id in file_ids:
-        print(f"File ID: {file_id}")
-    print("File added to the assistant {}".format(assistant_id))
     return json.dumps({"file_ids": file_ids})
 
 def reload_assistant_with_only_proxy_file(assistant_id, proxy_file_id):
-    print("Reloading assistant with only proxy file {}".format(assistant_id))
     _ = client.beta.assistants.update(
         assistant_id=assistant_id,
         file_ids=[proxy_file_id],
     )
-    print("Assistant reloaded with only proxy file {}".format(assistant_id))
     return json.dumps({"file_ids": [proxy_file_id]})
 
-def default_function():
-    return json.dumps({"file_ids": []})
+# Fonctions associées aux outils
+FUNCTIONS_TO_HANDLE = {
+    "add_file_to_the_assistant": add_file_to_the_assistant,
+    "reload_assistant_with_only_proxy_file": reload_assistant_with_only_proxy_file,
+}
 
 FUNCTIONS_TOOLS = [
     {
@@ -93,8 +89,6 @@ TOOLS = [
     {"type": "retrieval"},
 ] 
 
-# Inclure les fonctions dans les outils
-
 TOOLS.extend(FUNCTIONS_TOOLS)
 
 # Instructions pour l'assistant
@@ -130,12 +124,6 @@ A noté que passé un certain nombre de fichiers (20) l'assistant ne pourra plus
 
 Merci d'avance pour votre aide !
 """
-
-# Fonctions associées aux outils
-FUNCTIONS_TO_HANDLE = {
-    "add_file_to_the_assistant": add_file_to_the_assistant,
-    "reload_assistant_with_only_proxy_file": reload_assistant_with_only_proxy_file,
-}
 
 def send_files_to_openAI(data):
     file = client.files.create(
@@ -237,7 +225,7 @@ def run_assistant(client, assistant_id, thread_id):
             run_id = run.id
             for tool_call in tools_call:
                 function_name = tool_call.function.name
-                function_to_handle = FUNCTIONS_TO_HANDLE.get(function_name, default_function)
+                function_to_handle = FUNCTIONS_TO_HANDLE.get(function_name)
                 arguments = json.loads(tool_call.function.arguments)
                 arguments['assistant_id'] = assistant_id
                 print(f"Function {function_name} called with arguments: {arguments}")
@@ -256,7 +244,7 @@ def run_assistant(client, assistant_id, thread_id):
 if __name__ == "__main__":
     data_path = args.data_path
     data_path = os.path.join(data_path, 'json')
-    proxy_file_path = os.path.join(data_path, 'proxy.json') # Assurez-vous que ce chemin est correct
+    proxy_file_path = os.path.join(data_path, 'proxy.json')
     files = []
 
     if os.path.isfile(data_path) and data_path.endswith(".json"):
@@ -275,6 +263,7 @@ if __name__ == "__main__":
 
     # Création de l'assistant avec les outils et les instructions
     assistant_id, thread_id = setup_assistant(client, [proxy_file.id])
+
     # Debugging
     print(f"Debugging: Useful for checking the generated agent in the playground. https://platform.openai.com/playground?mode=assistant&assistant={assistant_id}")
     print(f"Debugging: Useful for checking logs. https://platform.openai.com/playground?thread={thread_id}")
