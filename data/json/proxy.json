@@ -3,54 +3,54 @@
         "name": "FTSR.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FTSR depuis 2012 a l'université de Lausanne.",
         "tag": "#students #FTSR",
-        "id": "file-0mdIJ9jJddmA0OH3Dd8X5wfq"
+        "id": "file-zCI9KBmk04WC7zJI07GPIChm"
     },
     {
         "name": "FGSE.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FGSE depuis 2012 a l'université de Lausanne.",
         "tag": "#students #FGSE",
-        "id": "file-dgI8PfL83qCdaGUhL7QfOa9x"
+        "id": "file-H7NZcF6AlWv2PdwvIvM9FRm8"
     },
     {
         "name": "FDCA.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FDCA depuis 2012 a l'université de Lausanne.",
         "tag": "#students #FDCA",
-        "id": "file-sdkSnpXdbtTISQuILTjNqO9x"
+        "id": "file-pGBsqLUY5zfOIhkp5cgW3yv3"
     },
     {
         "name": "SSP.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en SSP depuis 2012 a l'université de Lausanne.",
         "tag": "#students #SSP",
-        "id": "file-AzpCxIKfheWVaFsDFpkxqgdw"
+        "id": "file-t65ph5ZalN9M9cqiQQst7RWL"
     },
     {
         "name": "FBM.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FBM depuis 2012 a l'université de Lausanne.",
         "tag": "#students #FBM",
-        "id": "file-NznZQfB2YPhip4dO4sWk4GsE"
+        "id": "file-gWdSfIJQZp1l5ELUJxH54Wkw"
     },
     {
         "name": "TOTAL.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en TOTAL depuis 2012 a l'université de Lausanne.",
         "tag": "#students #TOTAL",
-        "id": "file-hCCkOxJzvJluJXtP913TFgUl"
+        "id": "file-1QCR9qZpW1LLvBRYgiReWXtJ"
     },
     {
         "name": "FCUE.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en FCUE depuis 2012 a l'université de Lausanne.",
         "tag": "#students #FCUE",
-        "id": "file-MZwO81sgGZBANyth8QhZZ1km"
+        "id": "file-kIku4KmtTVuob3Dxahh68T1F"
     },
     {
         "name": "HEC.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en HEC depuis 2012 a l'université de Lausanne.",
         "tag": "#students #HEC",
-        "id": "file-mCUPPM40uISjzMFjlisBUj55"
+        "id": "file-Ty8S84dHQC7awKaDisMpp3DL"
     },
     {
         "name": "Lettres.json",
         "context": "Ce document retrace les statistiques du nombres d'étudiant(nationalité, sexe, nationalité) inscrit au semestre d'automne en Lettres depuis 2012 a l'université de Lausanne.",
         "tag": "#students #Lettres",
-        "id": "file-gzFEPePsLZx5UlWgw8eeU6Ns"
+        "id": "file-pqVa0pjwVjSWvI6LHfmS6xsW"
     }
 ]
