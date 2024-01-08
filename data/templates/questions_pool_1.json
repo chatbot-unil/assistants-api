@@ -1,0 +1,104 @@
+[
+	{
+		"question": "Combien d'étudiants {sexe} étaient inscrits à la faculté de {faculté} en {année} ?",
+		"answer_json": {
+			"nombre": ":nombre",
+			"sexe": ":sexe",
+			"faculté": ":faculté",
+			"année": ":année"
+		}
+	},
+	{
+		"question": "Quelle était la répartition des étudiants par sexe à la faculté de {faculté} en {année} ?",
+		"answer_json": [
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année": ":année"
+			},
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année": ":année"
+			}
+		
+		]
+	},
+	{
+		"question": "Quelle était la répartition des étudiants par nationalité à la faculté de {faculté} en {année} ?",
+		"answer_json": [
+			{
+				"nombre": ":nombre",
+				"nationalité": ":nationalité",
+				"faculté": ":faculté",
+				"année": ":année"
+			},
+			{
+				"nombre": ":nombre",
+				"nationalité": ":nationalité",
+				"faculté": ":faculté",
+				"année": ":année"
+			}
+		
+		]
+	},
+	{
+		"question": "Combien d'étudiants étaient inscrits à la faculté de {faculté} en {année} ?",
+		"answer_json":{
+			"nombre": ":nombre",
+			"faculté": ":faculté",
+			"année": ":année"
+		}	
+	},
+	{
+		"question": "Combien d'étudiants internationaux étaient inscrits à la faculté de {faculté} en {année} ?",
+		"answer_json": {
+			"nombre": ":nombre",
+			"faculté": ":faculté",
+			"année": ":année"
+		}
+	},
+	{
+		"question": "Quelle était la proportion d'étudiants internationaux à la faculté de {faculté} en {année} ?",
+		"answer_json": {
+			"nombre": ":nombre",
+			"faculté": ":faculté",
+			"année": ":année"
+		}
+	},
+	{
+		"question": "Quel pourcentage d'étudiants {sexe} à la faculté de {faculté} en {année} étaient {CH | étrangers} ?",
+		"answer_json": [
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année": ":année",
+				"nationalité": ":nationalité"
+			},
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année": ":année",
+				"nationalité": ":nationalité"
+			},
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année": ":année",
+				"nationalité": ":nationalité"
+			},
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année": ":année",
+				"nationalité": ":nationalité"
+			}
+		]
+	}
+]

@@ -1,0 +1,37 @@
+[
+	{
+		"name":"pool1",
+		"description":"pool de questions contenant les des questons portant sur une seule faculté et une seule année",
+		"questions": [
+			"Combien d'étudiants {sexe} étaient inscrits à la faculté de {faculté} en {année} ?",
+			"Quelle était la répartition des étudiants par sexe à la faculté de {faculté} en {année} ?",
+			"Quelle était la répartition des étudiants par nationalité à la faculté de {faculté} en {année} ?",
+			"Quel pourcentage d'étudiants {sexe} à la faculté de {faculté} en {année} étaient {CH | étrangers} ?",
+			"Combien d'étudiants {CH | étrangers} étaient inscrits à la faculté de {faculté} en {année} ?",
+			"Quelle était la répartition des étudiants par sexe à la faculté de {faculté} en {année} ?",
+			"Combien d'étudiants étaient inscrits à la faculté de {faculté} en {année} ?",
+			"Quelle était la proportion d'étudiants internationaux à la faculté de {faculté} en {année} ?"
+		]
+	},
+	{
+		"name" :"pool2",
+		"description": "pool de questions contenant les des questons portant sur plusieurs facultés et une seule année",
+		"questions": [
+			"Comparez le nombre total d'étudiants inscrits dans les facultés de {faculté 1} et {faculté 2} en {année}.",
+			"Quel pourcentage du total des étudiants inscrits en {année} était représenté par les étudiants de {faculté 1} et {faculté 2} respectivement ?", 
+			"En {année}, quelle faculté entre {faculté 1} et {faculté 2} avait la plus grande proportion d'étudiants internationaux ?",
+			"Quelle était la différence dans la répartition des étudiants par sexe entre les facultés de {faculté 1} et {faculté 2} en {année} ?",
+			"En {année}, quelle faculté entre {faculté 1} et {faculté 2} avait une plus grande diversité de nationalités parmi les étudiants inscrits ?"
+		]
+	},
+	{
+		"name" :"pool3",
+		"description": "pool de questions contenant les des questons portant sur plusieurs facultés et plusieurs années",
+		"questions": [
+			"Comment a évolué le nombre total d'étudiants inscrits à la faculté de {faculté} de {année de début} à {année de fin} ?",
+			"Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de {faculté} entre {année de début} et {année de fin} ?",
+			"Entre {année de début} et {année de fin}, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de {faculté} ?",
+			"Quelle faculté de {faculté} a connu la plus grande croissance en termes de nombre d'étudiants de {année de début} à {année de fin} ?"
+		]
+	}
+]
