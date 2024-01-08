@@ -10,20 +10,10 @@
 		}
 	}, 
 	{
-		"question": "Quel pourcentage du total des étudiants inscrits en {année} était représenté par les étudiants de {faculté 1} et {faculté 2} respectivement ?", 
-		"answer_json": {
-			"pourcentage_faculté_1": ":pourcentage_faculté_1", 
-			"pourcentage_faculté_2": ":pourcentage_faculté_2", 
-			"faculté_1": ":faculté_1", 
-			"faculté_2": ":faculté_2", 
-			"année": ":année"
-		}
-	}, 
-	{
 		"question": "En {année}, quelle faculté entre {faculté 1} et {faculté 2} avait la plus grande proportion d'étudiants internationaux ?", 
 		"answer_json": {
-			"proportion_internationaux_faculté_1": ":proportion_internationaux_faculté_1", 
-			"proportion_internationaux_faculté_2": ":proportion_internationaux_faculté_2", 
+			"nombre_faculté_1": ":proportion_internationaux_faculté_1", 
+			"nombre_faculté_2": ":proportion_internationaux_faculté_2", 
 			"faculté_1": ":faculté_1", 
 			"faculté_2": ":faculté_2", 
 			"année": ":année"
@@ -31,19 +21,28 @@
 	}, 
 	{
 		"question": "Quelle était la différence dans la répartition des étudiants par sexe entre les facultés de {faculté 1} et {faculté 2} en {année} ?", 
-		"answer_json": {
-			"répartition_sexe_faculté_1": ":répartition_sexe_faculté_1", 
-			"répartition_sexe_faculté_2": ":répartition_sexe_faculté_2", 
-			"faculté_1": ":faculté_1", 
-			"faculté_2": ":faculté_2", 
-			"année": ":année"
-		}
+		"answer_json": [
+			{
+				"nombre_faculté_1": ":pourcentage_hommes_faculté_1", 
+				"nombre_faculté_2": ":pourcentage_hommes_faculté_2", 
+				"faculté_1": ":faculté_1", 
+				"faculté_2": ":faculté_2", 
+				"année": ":année"
+			}, 
+			{
+				"nombre_faculté_1": ":pourcentage_femmes_faculté_1", 
+				"nombre_faculté_2": ":pourcentage_femmes_faculté_2", 
+				"faculté_1": ":faculté_1", 
+				"faculté_2": ":faculté_2", 
+				"année": ":année"
+			}
+		]
 	},
 	{
 		"question" : "En {année}, quelle faculté entre {faculté 1} et {faculté 2} avait une plus grande diversité de nationalités parmi les étudiants inscrits ?",
 		"answer_json": {
-			"pourcentage_faculté_1": ":pourcentage_faculté_1",
-			"pourcentage_faculté_2": ":pourcentage_faculté_2",
+			"nombre_faculté_1": ":pourcentage_faculté_1",
+			"nombre_faculté_2": ":pourcentage_faculté_2",
 			"faculté_1": ":faculté_1", 
 			"faculté_2": ":faculté_2", 
 			"année": ":année"
