@@ -2,7 +2,7 @@
 	{
 		"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de {faculté} de {année de début} à {année de fin} ?",
 		"answer_json": {
-			"évolution_nombre_étudiants": ":évolution",
+			"nombre": ":nombre",
 			"faculté": ":faculté",
 			"année_de_début": ":année_de_début",
 			"année_de_fin": ":année_de_fin"
@@ -11,7 +11,7 @@
 	{
 		"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de {faculté} entre {année de début} et {année de fin} ?",
 		"answer_json": {
-			"tendance_internationaux": ":tendance",
+			"nombre": ":nombre",
 			"faculté": ":faculté",
 			"année_de_début": ":année_de_début",
 			"année_de_fin": ":année_de_fin"
@@ -19,18 +19,28 @@
 	},
 	{
 		"question": "Entre {année de début} et {année de fin}, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de {faculté} ?",
-		"answer_json": {
-			"évolution_répartition_sexe_1": ":évolution",
-			"évolution_répartition_sexe_2": ":évolution",
-			"faculté": ":faculté",
-			"année_de_début": ":année_de_début",
-			"année_de_fin": ":année_de_fin"
-		}
+		"answer_json": [
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année_de_début": ":année_de_début",
+				"année_de_fin": ":année_de_fin"
+			},
+			{
+				"nombre": ":nombre",
+				"sexe": ":sexe",
+				"faculté": ":faculté",
+				"année_de_début": ":année_de_début",
+				"année_de_fin": ":année_de_fin"
+			}
+		
+		]
 	},
 	{
 		"question": "Quelle faculté de {faculté} a connu la plus grande croissance en termes de nombre d'étudiants de {année de début} à {année de fin} ?",
 		"answer_json": {
-			"croissance_nombre_étudiants": ":croissance",
+			"nombre": ":nombre",
 			"faculté": ":faculté",
 			"année_de_début": ":année_de_début",
 			"année_de_fin": ":année_de_fin"

@@ -1,0 +1,3484 @@
+[
+	[
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FCUE de 2013 à 2017 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FCUE",
+				"année_de_début": "2013",
+				"année_de_fin": "2017"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": -18,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": -14,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": -23,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": -32,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": -16,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": -12,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": -21,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": -30,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 4,
+				"faculté": "FTSR",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": -5,
+				"faculté": "FTSR",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": -14,
+				"faculté": "FTSR",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": -9,
+				"faculté": "FTSR",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": -18,
+				"faculté": "FTSR",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FTSR de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": -9,
+				"faculté": "FTSR",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": -39,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": 22,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": 41,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": -33,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": 41,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": 61,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": 80,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": 6,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 20,
+				"faculté": "Lettres",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": 39,
+				"faculté": "Lettres",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": -35,
+				"faculté": "Lettres",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": 19,
+				"faculté": "Lettres",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": -55,
+				"faculté": "Lettres",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de Lettres de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": -74,
+				"faculté": "Lettres",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": 26,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": 214,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": 231,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": 433,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": 430,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": 188,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": 205,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": 407,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": 404,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 17,
+				"faculté": "HEC",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": 219,
+				"faculté": "HEC",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": 216,
+				"faculté": "HEC",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": 202,
+				"faculté": "HEC",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": 199,
+				"faculté": "HEC",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de HEC de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "HEC",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": 90,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": 110,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": 199,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": 360,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": 444,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": 20,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": 109,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": 270,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": 354,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 89,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": 250,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": 334,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": 161,
+				"faculté": "FDCA",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": 245,
+				"faculté": "FDCA",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FDCA de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": 84,
+				"faculté": "FDCA",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": -35,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": 40,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": 60,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": 95,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": 63,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": 75,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": 95,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": 130,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": 98,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 20,
+				"faculté": "FGSE",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": 55,
+				"faculté": "FGSE",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": 23,
+				"faculté": "FGSE",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": 35,
+				"faculté": "FGSE",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": 3,
+				"faculté": "FGSE",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de FGSE de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": -32,
+				"faculté": "FGSE",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": 60,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": 313,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": 354,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": 636,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": 756,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": 253,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": 294,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": 576,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": 696,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 41,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": 323,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": 443,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": 282,
+				"faculté": "SSP",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": 402,
+				"faculté": "SSP",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Comment a évolué le nombre total d'étudiants inscrits à la faculté de SSP de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": 120,
+				"faculté": "SSP",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		}
+	],
+	[
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2015 et 2016 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2015 et 2018 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2015 et 2019 ?",
+			"answer_json": {
+				"nombre": 4,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2015 et 2020 ?",
+			"answer_json": {
+				"nombre": 5,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2015 et 2021 ?",
+			"answer_json": {
+				"nombre": 7,
+				"faculté": "FTSR",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2016 et 2018 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2016 et 2019 ?",
+			"answer_json": {
+				"nombre": 3,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2016 et 2020 ?",
+			"answer_json": {
+				"nombre": 4,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2016 et 2021 ?",
+			"answer_json": {
+				"nombre": 7,
+				"faculté": "FTSR",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2018 et 2019 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FTSR",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2018 et 2020 ?",
+			"answer_json": {
+				"nombre": 3,
+				"faculté": "FTSR",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2018 et 2021 ?",
+			"answer_json": {
+				"nombre": 5,
+				"faculté": "FTSR",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2019 et 2020 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FTSR",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2019 et 2021 ?",
+			"answer_json": {
+				"nombre": 3,
+				"faculté": "FTSR",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FTSR entre 2020 et 2021 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FTSR",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2015 et 2016 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2015 et 2018 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2015 et 2019 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2015 et 2020 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2015 et 2021 ?",
+			"answer_json": {
+				"nombre": -4,
+				"faculté": "Lettres",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2016 et 2018 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2016 et 2019 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2016 et 2020 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2016 et 2021 ?",
+			"answer_json": {
+				"nombre": -5,
+				"faculté": "Lettres",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2018 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "Lettres",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2018 et 2020 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "Lettres",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2018 et 2021 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "Lettres",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2019 et 2020 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "Lettres",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2019 et 2021 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "Lettres",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de Lettres entre 2020 et 2021 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "Lettres",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2015 et 2016 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2015 et 2018 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2015 et 2019 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2015 et 2020 ?",
+			"answer_json": {
+				"nombre": -4,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2015 et 2021 ?",
+			"answer_json": {
+				"nombre": -5,
+				"faculté": "HEC",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2016 et 2018 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2016 et 2019 ?",
+			"answer_json": {
+				"nombre": -3,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2016 et 2020 ?",
+			"answer_json": {
+				"nombre": -4,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2016 et 2021 ?",
+			"answer_json": {
+				"nombre": -5,
+				"faculté": "HEC",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2018 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "HEC",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2018 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "HEC",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2018 et 2021 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "HEC",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2019 et 2020 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "HEC",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2019 et 2021 ?",
+			"answer_json": {
+				"nombre": -2,
+				"faculté": "HEC",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de HEC entre 2020 et 2021 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "HEC",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2015 et 2016 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2015 et 2018 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2015 et 2019 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2015 et 2020 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2015 et 2021 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2016 et 2018 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2016 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2016 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2016 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2018 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2018 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2018 et 2021 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2019 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FDCA",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2019 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FDCA entre 2020 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FDCA",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2015 et 2016 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2015 et 2018 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2015 et 2019 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2015 et 2020 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2015 et 2021 ?",
+			"answer_json": {
+				"nombre": 3,
+				"faculté": "FGSE",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2016 et 2018 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2016 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2016 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2016 et 2021 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FGSE",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2018 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FGSE",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2018 et 2020 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "FGSE",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2018 et 2021 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FGSE",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2019 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "FGSE",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2019 et 2021 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FGSE",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de FGSE entre 2020 et 2021 ?",
+			"answer_json": {
+				"nombre": 2,
+				"faculté": "FGSE",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2015 et 2016 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2015 et 2018 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2015 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2015 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2015 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2016 et 2018 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2016 et 2019 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2016 et 2020 ?",
+			"answer_json": {
+				"nombre": -1,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2016 et 2021 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2018 et 2019 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2018 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2018 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2019 et 2020 ?",
+			"answer_json": {
+				"nombre": 0,
+				"faculté": "SSP",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2019 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "SSP",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle a été la tendance de la proportion d'étudiants internationaux à la faculté de SSP entre 2020 et 2021 ?",
+			"answer_json": {
+				"nombre": 1,
+				"faculté": "SSP",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		}
+	],
+	[
+		{
+			"question": "Entre 2015 et 2016, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "3%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-3%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "3%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "-3%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2020 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FTSR ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FTSR",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FTSR",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2016, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2020 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de Lettres ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "Lettres",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "Lettres",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2016, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "2%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "-2%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "3%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-3%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2020 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de HEC ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "HEC",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "HEC",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2016, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-5%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "5%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-6%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "6%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-5%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "5%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-6%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "6%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2020 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FDCA ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FDCA",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FDCA",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2016, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "0%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "0%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-5%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "5%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2020 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de FGSE ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "FGSE",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "FGSE",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2016, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "1%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				},
+				{
+					"nombre": "-1%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2016"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2015 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2015",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2018, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2018"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2016 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-5%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "5%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2016",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2019, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2018",
+					"année_de_fin": "2019"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2018",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2018 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-4%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "4%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2018",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2020, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-2%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				},
+				{
+					"nombre": "2%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2019",
+					"année_de_fin": "2020"
+				}
+			]
+		},
+		{
+			"question": "Entre 2019 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-3%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "3%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2019",
+					"année_de_fin": "2021"
+				}
+			]
+		},
+		{
+			"question": "Entre 2020 et 2021, quelle a été l'évolution de la répartition des étudiants par sexe à la faculté de SSP ?",
+			"answer_json": [
+				{
+					"nombre": "-1%",
+					"sexe": "hommes",
+					"faculté": "SSP",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				},
+				{
+					"nombre": "1%",
+					"sexe": "femmes",
+					"faculté": "SSP",
+					"année_de_début": "2020",
+					"année_de_fin": "2021"
+				}
+			]
+		}
+	],
+	[
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2015 à 2016 ?",
+			"answer_json": {
+				"nombre": 90,
+				"faculté": "FDCA",
+				"année_de_début": "2015",
+				"année_de_fin": "2016"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2015 à 2018 ?",
+			"answer_json": {
+				"nombre": 313,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2015 à 2019 ?",
+			"answer_json": {
+				"nombre": 354,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2015 à 2020 ?",
+			"answer_json": {
+				"nombre": 636,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2015 à 2021 ?",
+			"answer_json": {
+				"nombre": 756,
+				"faculté": "SSP",
+				"année_de_début": "2015",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2016 à 2018 ?",
+			"answer_json": {
+				"nombre": 253,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2018"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2016 à 2019 ?",
+			"answer_json": {
+				"nombre": 294,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2016 à 2020 ?",
+			"answer_json": {
+				"nombre": 576,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2016 à 2021 ?",
+			"answer_json": {
+				"nombre": 696,
+				"faculté": "SSP",
+				"année_de_début": "2016",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2018 à 2019 ?",
+			"answer_json": {
+				"nombre": 89,
+				"faculté": "FDCA",
+				"année_de_début": "2018",
+				"année_de_fin": "2019"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2018 à 2020 ?",
+			"answer_json": {
+				"nombre": 323,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2018 à 2021 ?",
+			"answer_json": {
+				"nombre": 443,
+				"faculté": "SSP",
+				"année_de_début": "2018",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2019 à 2020 ?",
+			"answer_json": {
+				"nombre": 282,
+				"faculté": "SSP",
+				"année_de_début": "2019",
+				"année_de_fin": "2020"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2019 à 2021 ?",
+			"answer_json": {
+				"nombre": 402,
+				"faculté": "SSP",
+				"année_de_début": "2019",
+				"année_de_fin": "2021"
+			}
+		},
+		{
+			"question": "Quelle faculté a connu la plus grande croissance en termes de nombre d'étudiants de 2020 à 2021 ?",
+			"answer_json": {
+				"nombre": 120,
+				"faculté": "SSP",
+				"année_de_début": "2020",
+				"année_de_fin": "2021"
+			}
+		}
+	]
+]
